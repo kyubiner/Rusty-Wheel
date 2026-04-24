@@ -1,15 +1,26 @@
-[gd_scene load_steps=4 format=3 uid="uid://bnu1jwqi2r04r"]
+[gd_scene load_steps=7 format=3 uid="uid://bnu1jwqi2r04r"]
 
 [ext_resource type="PackedScene" uid="uid://8sii13b6ynq5" path="res://scene/player-movement.tscn" id="1_md75l"]
 [ext_resource type="Texture2D" uid="uid://dd5lvyf4j7223" path="res://icon.svg" id="2_sm5v4"]
+[ext_resource type="Script" path="res://script/conveyor.gd" id="3_conv"]
+[ext_resource type="Script" path="res://script/lever.gd" id="4_lev"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fyr6n"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_floor"]
 size = Vector2(303.5, 131)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_conv"]
+size = Vector2(220, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lev"]
+size = Vector2(50, 50)
+
 
 [node name="Main" type="Node2D"]
 
+
 [node name="Player" parent="." instance=ExtResource("1_md75l")]
 position = Vector2(571, 441)
+
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -20,4 +31,29 @@ texture = ExtResource("2_sm5v4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(662.25, 560.5)
-shape = SubResource("RectangleShape2D_fyr6n")
+shape = SubResource("RectangleShape2D_floor")
+
+
+[node name="Conveyor" type="Area2D" parent="."]
+position = Vector2(660, 500)
+script = ExtResource("3_conv")
+
+[node name="Sprite2D" type="Sprite2D" parent="Conveyor"]
+texture = ExtResource("2_sm5v4")
+scale = Vector2(1.7, 0.25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Conveyor"]
+shape = SubResource("RectangleShape2D_conv")
+
+
+[node name="Lever" type="Area2D" parent="."]
+position = Vector2(420, 500)
+script = ExtResource("4_lev")
+conveyor_path = NodePath("../Conveyor")
+
+[node name="Sprite2D" type="Sprite2D" parent="Lever"]
+texture = ExtResource("2_sm5v4")
+scale = Vector2(0.3, 0.6)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lever"]
+shape = SubResource("RectangleShape2D_lev")
