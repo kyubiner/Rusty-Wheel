@@ -35,6 +35,6 @@ func _physics_process(delta: float) -> void:
 	
 	# ini untuk bagian flip kiri kanan angle karakter
 	if direction == 1.0:
-		animated_sprite_2d.flip_h = false
-	elif direction == -1.0:
 		animated_sprite_2d.flip_h = true
+	elif direction == -1.0:
+		animated_sprite_2d.flip_h = false
