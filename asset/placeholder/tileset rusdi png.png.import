@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2h3r8u70okpn"
-path="res://.godot/imported/OrangeRobot_Attack1.png-db812d7d38428ffe4090a6354cf2f6cf.ctex"
+uid="uid://cghmqtml3af81"
+path="res://.godot/imported/tileset rusdi png.png-55573f8438a25511b4221d2ea493ce94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/placeholder/OrangeRobot/Spritesheets/OrangeRobot_Attack1.png"
-dest_files=["res://.godot/imported/OrangeRobot_Attack1.png-db812d7d38428ffe4090a6354cf2f6cf.ctex"]
+source_file="res://asset/placeholder/tileset rusdi png.png"
+dest_files=["res://.godot/imported/tileset rusdi png.png-55573f8438a25511b4221d2ea493ce94.ctex"]
 
 [params]
 
