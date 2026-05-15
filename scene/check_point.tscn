@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ci8ifrvxby4n7"]
+
+[ext_resource type="Script" uid="uid://dd0xs3vyq32kv" path="res://script/check_point.gd" id="1_14lil"]
+[ext_resource type="Texture2D" uid="uid://bknmxpajaa3ip" path="res://asset/tilemap_rusty_wheel.png" id="2_14lil"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_14lil"]
+radius = 26.476404
+
+[node name="CheckPoint" type="StaticBody2D" unique_id=492146603]
+script = ExtResource("1_14lil")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=620811175]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=155787070]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_14lil")
+
+[node name="lampu_off" type="Sprite2D" parent="." unique_id=182022283]
+position = Vector2(-1, -16)
+texture = ExtResource("2_14lil")
+hframes = 8
+vframes = 8
+frame = 52
+
+[node name="lampu_on" type="Sprite2D" parent="." unique_id=255581203]
+visible = false
+position = Vector2(0, -10)
+texture = ExtResource("2_14lil")
+region_enabled = true
+region_rect = Rect2(168.04036, 204.51953, 18.245743, 19.695969)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

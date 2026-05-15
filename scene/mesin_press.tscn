@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bn718di7itlec"]
+
+[ext_resource type="Script" uid="uid://ccjd3aswbe8xg" path="res://script/automatic_press.gd" id="1_3kxxx"]
+[ext_resource type="Texture2D" uid="uid://bknmxpajaa3ip" path="res://asset/tilemap_rusty_wheel.png" id="2_jmlpv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j5ol"]
+size = Vector2(12, 3)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jmlpv"]
+size = Vector2(14, 27)
+
+[node name="MesinPress" type="AnimatableBody2D" unique_id=125073045]
+script = ExtResource("1_3kxxx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1960622988]
+position = Vector2(763.99994, 345)
+scale = Vector2(0.41269842, 0.43258426)
+texture = ExtResource("2_jmlpv")
+region_enabled = true
+region_rect = Rect2(191.71951, 63.45471, 32.389755, 66.09616)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2008590637]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2005383412]
+position = Vector2(764, 357.5)
+shape = SubResource("RectangleShape2D_4j5ol")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1848685935]
+position = Vector2(764, 344.5)
+shape = SubResource("RectangleShape2D_jmlpv")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
