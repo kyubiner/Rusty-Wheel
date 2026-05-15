@@ -5,6 +5,8 @@ extends CharacterBody2D
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
+func _ready() -> void:
+	CheckPointManager.Checkpoint_position = global_position
 
 func _physics_process(delta: float) -> void:
 	
@@ -25,7 +27,6 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	# Ambil input A = KIRI dan D = Kanan
 	var direction := Input.get_axis("move_left", "move_right")
-	#print(direction)
 	if direction:
 		velocity.x = direction * SPEED
 	else:
