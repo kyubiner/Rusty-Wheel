@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bnu1jwqi2r04r"]
 
-[ext_resource type="PackedScene" uid="uid://8sii13b6ynq5" path="res://scene/player-movement.tscn" id="1_md75l"]
+[ext_resource type="PackedScene" uid="uid://8sii13b6ynq5" path="res://scene/player.tscn" id="1_md75l"]
+[ext_resource type="PackedScene" uid="uid://s5ucch3k8afc" path="res://scene/fan.tscn" id="2_0ha60"]
 [ext_resource type="Texture2D" uid="uid://c1861xseug17i" path="res://asset/placeholder/Untitled 04-25-2026 11-30-13.png" id="2_v0l8b"]
 [ext_resource type="Script" uid="uid://ccjd3aswbe8xg" path="res://script/automatic_press.gd" id="3_brvut"]
 [ext_resource type="Texture2D" uid="uid://cghmqtml3af81" path="res://asset/placeholder/tileset rusdi png.png" id="4_0ha60"]
@@ -23,6 +24,9 @@ texture = ExtResource("2_v0l8b")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1030762289]
 position = Vector2(573, 587)
 shape = SubResource("RectangleShape2D_fyr6n")
+
+[node name="Fan" parent="StaticBody2D" unique_id=136134518 instance=ExtResource("2_0ha60")]
+position = Vector2(-80, -107)
 
 [node name="Player" parent="." unique_id=1712090981 instance=ExtResource("1_md75l")]
 position = Vector2(525, 471)

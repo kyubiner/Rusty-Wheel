@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://s5ucch3k8afc"]
+
+[ext_resource type="Script" uid="uid://bdro8ckgvfhad" path="res://script/fan.gd" id="1_8k226"]
+[ext_resource type="Texture2D" uid="uid://cghmqtml3af81" path="res://asset/placeholder/tileset rusdi png.png" id="2_v1m0j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v1m0j"]
+size = Vector2(189, 185)
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_dseab"]
+lifetime_randomness = 0.53
+emission_shape = 3
+emission_box_extents = Vector3(10, 40, 0)
+spread = 15.0
+initial_velocity_min = 100.0
+initial_velocity_max = 200.0
+gravity = Vector3(0, 0, 0)
+
+[node name="Fan" type="Area2D" unique_id=4577989]
+script = ExtResource("1_8k226")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1332382587]
+position = Vector2(802, 560)
+shape = SubResource("RectangleShape2D_v1m0j")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=774388212]
+position = Vector2(899.99994, 479.00003)
+rotation = -0.5235988
+scale = Vector2(0.5758123, 0.6458333)
+texture = ExtResource("2_v1m0j")
+region_enabled = true
+region_rect = Rect2(256.75, 342.6752, 277.99597, 192.07004)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1694554947]
+position = Vector2(877.99994, 505.99994)
+rotation = -3.4836771
+amount = 50
+trail_enabled = true
+trail_lifetime = 1.48
+process_material = SubResource("ParticleProcessMaterial_dseab")
