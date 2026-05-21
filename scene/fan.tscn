@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://s5ucch3k8afc"]
 
 [ext_resource type="Script" uid="uid://bdro8ckgvfhad" path="res://script/fan.gd" id="1_8k226"]
-[ext_resource type="Texture2D" uid="uid://cghmqtml3af81" path="res://asset/placeholder/tileset rusdi png.png" id="2_v1m0j"]
+[ext_resource type="Texture2D" uid="uid://bknmxpajaa3ip" path="res://asset/tilemap_rusty_wheel.png" id="2_v1m0j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v1m0j"]
 size = Vector2(189, 185)
@@ -23,12 +23,12 @@ position = Vector2(802, 560)
 shape = SubResource("RectangleShape2D_v1m0j")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=774388212]
-position = Vector2(899.99994, 479.00003)
+position = Vector2(895, 487)
 rotation = -0.5235988
-scale = Vector2(0.5758123, 0.6458333)
+scale = Vector2(0.9618742, 1.0176241)
 texture = ExtResource("2_v1m0j")
 region_enabled = true
-region_rect = Rect2(256.75, 342.6752, 277.99597, 192.07004)
+region_rect = Rect2(101.373, 95.2259, 29, 33.647102)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1694554947]
 position = Vector2(877.99994, 505.99994)

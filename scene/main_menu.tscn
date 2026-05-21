@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bmkliowrcc6ml" path="res://asset/bg-main.png" id="1_2fwvj"]
 [ext_resource type="Texture2D" uid="uid://bcvj6tjsbvaep" path="res://asset/btn.png" id="1_3er1b"]
-[ext_resource type="Script" uid="uid://nu3vxgbpbafg" path="res://scene/main_menu.gd" id="1_14wem"]
+[ext_resource type="Script" uid="uid://nu3vxgbpbafg" path="res://script/main_menu.gd" id="1_14wem"]
 [ext_resource type="FontFile" uid="uid://bju7n1nex6n7i" path="res://asset/font/PixelifySans-Bold.ttf" id="1_hxu56"]
 [ext_resource type="Texture2D" uid="uid://bdsidiru8hdl6" path="res://asset/logo-rusty-wheel.png" id="4_0iwki"]
 [ext_resource type="Texture2D" uid="uid://jmufy07jyg08" path="res://asset/Card.png" id="5_sepwh"]

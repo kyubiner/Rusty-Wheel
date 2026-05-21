@@ -23,6 +23,10 @@ config/icon="res://icon.svg"
 
 CheckPointManager="*uid://dit374k52chne"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GodotTogether/plugin.cfg")
+
 [global_group]
 
 Player=""
