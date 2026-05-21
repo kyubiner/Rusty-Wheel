@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://s5ucch3k8afc"]
 
 [ext_resource type="Script" uid="uid://bdro8ckgvfhad" path="res://script/fan.gd" id="1_8k226"]
-[ext_resource type="Texture2D" uid="uid://bknmxpajaa3ip" path="res://asset/tilemap_rusty_wheel.png" id="2_v1m0j"]
+[ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-new.png" id="3_dseab"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v1m0j"]
 size = Vector2(189, 185)
@@ -15,7 +15,34 @@ initial_velocity_min = 100.0
 initial_velocity_max = 200.0
 gravity = Vector3(0, 0, 0)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_v1m0j"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_38uky"]
+atlas = ExtResource("3_dseab")
+region = Rect2(192, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p502m"]
+atlas = ExtResource("3_dseab")
+region = Rect2(288, 192, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4lnu"]
+atlas = ExtResource("3_dseab")
+region = Rect2(384, 192, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6ede"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38uky")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p502m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4lnu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
 
 [node name="Fan" type="Area2D" unique_id=4577989]
 script = ExtResource("1_8k226")
@@ -23,14 +50,6 @@ script = ExtResource("1_8k226")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1332382587]
 position = Vector2(802, 560)
 shape = SubResource("RectangleShape2D_v1m0j")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=774388212]
-position = Vector2(895, 487)
-rotation = -0.5235988
-scale = Vector2(0.9618742, 1.0176241)
-texture = ExtResource("2_v1m0j")
-region_enabled = true
-region_rect = Rect2(101.373, 95.2259, 29, 33.647102)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1694554947]
 position = Vector2(877.99994, 505.99994)
@@ -40,5 +59,9 @@ trail_enabled = true
 trail_lifetime = 1.48
 process_material = SubResource("ParticleProcessMaterial_dseab")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=564596971]
-sprite_frames = SubResource("SpriteFrames_v1m0j")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=688368395]
+position = Vector2(895, 493)
+sprite_frames = SubResource("SpriteFrames_w6ede")
+autoplay = "default"
+frame_progress = 0.122304365
+flip_h = true

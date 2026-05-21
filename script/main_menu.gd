@@ -30,3 +30,7 @@ func _on_button_no_pressed():
 # keluar dari game
 func _on_button_yes_pressed():
 	get_tree().quit()
+
+# masuk game
+func _on_button_start_pressed() -> void:
+	get_tree().change_scene_to_file("res://scene/main.tscn")

@@ -5,6 +5,7 @@ extends Area2D
 @export var inactive_time = 2.0
 
 @onready var particles = $GPUParticles2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 var is_active = true
 var timer = 0.0
@@ -17,8 +18,9 @@ func _physics_process(delta):
 	# kondisi aktif
 	if is_active:
 
-		# nyalakan partikel
+		# nyalakan partikel & animasi
 		particles.emitting = true
+		animated_sprite_2d.play()
 
 		# dorong player
 		for body in get_overlapping_bodies():
@@ -33,8 +35,9 @@ func _physics_process(delta):
 	# kondisi mati
 	else:
 
-		# matikan partikel
+		# matikan partikel & animasi 
 		particles.emitting = false
+		animated_sprite_2d.stop()
 
 		# timer mati
 		if timer >= inactive_time:
