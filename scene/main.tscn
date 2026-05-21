@@ -22,6 +22,11 @@ texture = ExtResource("1_brvut")
 position = Vector2(502, 489.5)
 shape = SubResource("RectangleShape2D_fyr6n")
 
+[node name="Fan" parent="StaticBody2D" unique_id=136134518 instance=ExtResource("2_0ha60")]
+position = Vector2(-80, -107)
+
+[node name="Player" parent="." unique_id=1712090981 instance=ExtResource("1_md75l")]
+position = Vector2(525, 471)
 [node name="CheckPoint" parent="." unique_id=492146603 instance=ExtResource("5_0ha60")]
 position = Vector2(126, 455)
 
