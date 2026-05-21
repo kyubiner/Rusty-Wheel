@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://ci8ifrvxby4n7"]
 
 [ext_resource type="Script" uid="uid://dd0xs3vyq32kv" path="res://script/check_point.gd" id="1_14lil"]
-[ext_resource type="Texture2D" uid="uid://bknmxpajaa3ip" path="res://asset/tilemap_rusty_wheel.png" id="2_14lil"]
+[ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-new.png" id="2_5xqtr"]
+[ext_resource type="Texture2D" uid="uid://b7fgiau13bljk" path="res://asset/checkPoint_off.png" id="2_85o8j"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_14lil"]
-radius = 26.476404
+radius = 200.01
 
 [node name="CheckPoint" type="StaticBody2D" unique_id=492146603]
 script = ExtResource("1_14lil")
@@ -17,14 +18,14 @@ shape = SubResource("CircleShape2D_14lil")
 
 [node name="lampu_off" type="Sprite2D" parent="." unique_id=182022283]
 position = Vector2(0, -10)
-texture = ExtResource("2_14lil")
-region_enabled = true
-region_rect = Rect2(136, 205, 18, 19)
+texture = ExtResource("2_85o8j")
+region_rect = Rect2(681, 483, 81, 93)
 
 [node name="lampu_on" type="Sprite2D" parent="." unique_id=255581203]
-position = Vector2(0, -10)
-texture = ExtResource("2_14lil")
+visible = false
+position = Vector2(1.5, -9)
+texture = ExtResource("2_5xqtr")
 region_enabled = true
-region_rect = Rect2(168, 205, 18, 19)
+region_rect = Rect2(681, 483, 81, 93)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
