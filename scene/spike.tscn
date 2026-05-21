@@ -12,11 +12,6 @@ size = Vector2(42, 76)
 [node name="Spike" type="Area2D" unique_id=1516459586]
 script = ExtResource("1_vi0yg")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=65543680]
-texture = ExtResource("2_vi0yg")
-region_enabled = true
-region_rect = Rect2(24, 501, 42, 75)
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=178141927]
 shape = SubResource("RectangleShape2D_xanym")
 
@@ -24,5 +19,10 @@ shape = SubResource("RectangleShape2D_xanym")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=212799337]
 shape = SubResource("RectangleShape2D_vi0yg")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=65543680]
+texture = ExtResource("2_vi0yg")
+region_enabled = true
+region_rect = Rect2(24, 501, 42, 75)
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
