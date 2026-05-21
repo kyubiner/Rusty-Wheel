@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1861xseug17i"
-path="res://.godot/imported/Untitled 04-25-2026 11-30-13.png-267c81ec10d67a7ada379ce64371f862.ctex"
+uid="uid://bknmxpajaa3ip"
+path="res://.godot/imported/tilemap_rusty_wheel.png-94139defec38393a666e80598a104d93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/placeholder/Untitled 04-25-2026 11-30-13.png"
-dest_files=["res://.godot/imported/Untitled 04-25-2026 11-30-13.png-267c81ec10d67a7ada379ce64371f862.ctex"]
+source_file="res://asset/tilemap_rusty_wheel.png"
+dest_files=["res://.godot/imported/tilemap_rusty_wheel.png-94139defec38393a666e80598a104d93.ctex"]
 
 [params]
 

@@ -1,28 +1,25 @@
 [gd_scene format=3 uid="uid://bnu1jwqi2r04r"]
 
+[ext_resource type="Texture2D" uid="uid://h1nlfh0ccnar" path="res://asset/background.png" id="1_brvut"]
 [ext_resource type="PackedScene" uid="uid://8sii13b6ynq5" path="res://scene/player.tscn" id="1_md75l"]
-[ext_resource type="PackedScene" uid="uid://s5ucch3k8afc" path="res://scene/fan.tscn" id="2_0ha60"]
-[ext_resource type="Texture2D" uid="uid://c1861xseug17i" path="res://asset/placeholder/Untitled 04-25-2026 11-30-13.png" id="2_v0l8b"]
-[ext_resource type="Script" uid="uid://ccjd3aswbe8xg" path="res://script/automatic_press.gd" id="3_brvut"]
-[ext_resource type="Texture2D" uid="uid://cghmqtml3af81" path="res://asset/placeholder/tileset rusdi png.png" id="4_0ha60"]
+[ext_resource type="PackedScene" uid="uid://bn718di7itlec" path="res://scene/mesin_press.tscn" id="4_brvut"]
+[ext_resource type="PackedScene" uid="uid://ci8ifrvxby4n7" path="res://scene/check_point.tscn" id="5_0ha60"]
+[ext_resource type="Script" uid="uid://dit374k52chne" path="res://script/check_point_manager.gd" id="5_4j5ol"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyr6n"]
-size = Vector2(1152, 126)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4j5ol"]
-size = Vector2(55, 112)
+size = Vector2(1662, 69)
 
 [node name="Main" type="Node2D" unique_id=1337815842]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2036402086]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=1734961268]
-position = Vector2(575.5, 319)
-scale = Vector2(1.1318359, 2.5390625)
-texture = ExtResource("2_v0l8b")
+position = Vector2(500.4999, 342.25003)
+scale = Vector2(1.6240237, 1.4160156)
+texture = ExtResource("1_brvut")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1030762289]
-position = Vector2(573, 587)
+position = Vector2(502, 489.5)
 shape = SubResource("RectangleShape2D_fyr6n")
 
 [node name="Fan" parent="StaticBody2D" unique_id=136134518 instance=ExtResource("2_0ha60")]
@@ -30,17 +27,16 @@ position = Vector2(-80, -107)
 
 [node name="Player" parent="." unique_id=1712090981 instance=ExtResource("1_md75l")]
 position = Vector2(525, 471)
+[node name="CheckPoint" parent="." unique_id=492146603 instance=ExtResource("5_0ha60")]
+position = Vector2(126, 455)
 
-[node name="MesinPress" type="AnimatableBody2D" parent="." unique_id=672432574]
-script = ExtResource("3_brvut")
+[node name="Player" parent="." unique_id=1712090981 groups=["Player"] instance=ExtResource("1_md75l")]
+position = Vector2(577, 439)
 
-[node name="Sprite2D" type="Sprite2D" parent="MesinPress" unique_id=810652543]
-position = Vector2(763.99994, 345)
-scale = Vector2(0.41269842, 0.43258426)
-texture = ExtResource("4_0ha60")
-region_enabled = true
-region_rect = Rect2(769.5998, 252.02563, 126.47174, 267.94867)
+[node name="MesinPress" parent="." unique_id=125073045 instance=ExtResource("4_brvut")]
+position = Vector2(-344, -31)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="MesinPress" unique_id=1390495845]
-position = Vector2(764, 342)
-shape = SubResource("RectangleShape2D_4j5ol")
+[node name="SaveManager" type="Node" parent="." unique_id=1719818551]
+
+[node name="CheckPoint" type="Node" parent="SaveManager" unique_id=1155254941]
+script = ExtResource("5_4j5ol")

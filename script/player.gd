@@ -7,6 +7,8 @@ const JUMP_VELOCITY = -400.0
 
 var wind_force = 0.0
 
+func _ready() -> void:
+	CheckPointManager.Checkpoint_position = global_position
 
 func _physics_process(delta: float) -> void:
 

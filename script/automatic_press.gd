@@ -35,7 +35,6 @@ func setup_crush_logic():
 # Fungsi ini digabung agar tidak duplikat
 func _on_area_2d_body_entered(body):
 	# Mengecek apakah yang masuk ke area adalah player
-	if body.name == "player_movement" or body.is_in_group("player") or body.name == "Player":
+	if body.is_in_group("player") or body.name == "Player":
 		print("Player tertindih mesin!")
-		# Merestart scene (level) dari awal
-		get_tree().reload_current_scene()
+		body.global_position = CheckPointManager.Checkpoint_position
