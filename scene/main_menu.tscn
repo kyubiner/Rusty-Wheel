@@ -25,6 +25,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "MainMenu"
 script = ExtResource("1_14wem")
 
 [node name="Background" type="Panel" parent="." unique_id=1126754412]
@@ -34,6 +35,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Background"
 theme_override_styles/panel = SubResource("StyleBoxTexture_0iwki")
 
 [node name="Button" type="VBoxContainer" parent="." unique_id=531528474]
@@ -47,11 +49,13 @@ offset_right = 406.0
 offset_bottom = 307.0
 grow_vertical = 2
 scale = Vector2(0.76000077, 0.88)
+accessibility_name = "ButtonGroup"
 theme_override_constants/separation = 8
 
 [node name="ButtonStart" type="Button" parent="Button" unique_id=1251275680]
 layout_mode = 2
 size_flags_vertical = 3
+accessibility_name = "ButtonMulai"
 theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 35
@@ -400,6 +404,7 @@ Irsyadulloh Ramadhan B.N
 Richo Albert Tio"
 fit_content = true
 
+[connection signal="pressed" from="Button/ButtonStart" to="." method="_on_button_start_pressed"]
 [connection signal="pressed" from="Button/ButtonCredit" to="." method="_on_button_credit_pressed"]
 [connection signal="pressed" from="Button/ButtonExit" to="." method="_on_button_exit_pressed"]
 [connection signal="pressed" from="UIExit/CardExit/ButtonYes" to="." method="_on_button_yes_pressed"]
