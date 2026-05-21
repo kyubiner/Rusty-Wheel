@@ -1,0 +1,407 @@
+[gd_scene format=3 uid="uid://chb4yxcmyepr5"]
+
+[ext_resource type="Texture2D" uid="uid://bmkliowrcc6ml" path="res://asset/bg-main.png" id="1_2fwvj"]
+[ext_resource type="Texture2D" uid="uid://bcvj6tjsbvaep" path="res://asset/btn.png" id="1_3er1b"]
+[ext_resource type="Script" uid="uid://nu3vxgbpbafg" path="res://scene/main_menu.gd" id="1_14wem"]
+[ext_resource type="FontFile" uid="uid://bju7n1nex6n7i" path="res://asset/font/PixelifySans-Bold.ttf" id="1_hxu56"]
+[ext_resource type="Texture2D" uid="uid://bdsidiru8hdl6" path="res://asset/logo-rusty-wheel.png" id="4_0iwki"]
+[ext_resource type="Texture2D" uid="uid://jmufy07jyg08" path="res://asset/Card.png" id="5_sepwh"]
+[ext_resource type="Texture2D" uid="uid://cvb2igt75cqr4" path="res://asset/btnBack.png" id="7_2atga"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0iwki"]
+texture = ExtResource("1_2fwvj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_hxu56"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_14wem"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2atga"]
+texture = ExtResource("5_sepwh")
+
+[node name="MainMenu" type="Control" unique_id=131012756]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_14wem")
+
+[node name="Background" type="Panel" parent="." unique_id=1126754412]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_0iwki")
+
+[node name="Button" type="VBoxContainer" parent="." unique_id=531528474]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 61.0
+offset_top = 93.0
+offset_right = 406.0
+offset_bottom = 307.0
+grow_vertical = 2
+scale = Vector2(0.76000077, 0.88)
+theme_override_constants/separation = 8
+
+[node name="ButtonStart" type="Button" parent="Button" unique_id=1251275680]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover = SubResource("StyleBoxTexture_hxu56")
+text = "Start"
+icon = ExtResource("1_3er1b")
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="ButtonCredit" type="Button" parent="Button" unique_id=1538849356]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover = SubResource("StyleBoxTexture_hxu56")
+text = "Credit"
+icon = ExtResource("1_3er1b")
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="ButtonExit" type="Button" parent="Button" unique_id=1159416100]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover = SubResource("StyleBoxTexture_hxu56")
+text = "Exit"
+icon = ExtResource("1_3er1b")
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="Logo" type="TextureRect" parent="." unique_id=704065744]
+layout_mode = 1
+offset_left = 30.0
+offset_top = 178.0
+offset_right = 435.0
+offset_bottom = 471.0
+scale = Vector2(0.8800005, 0.72000015)
+texture = ExtResource("4_0iwki")
+
+[node name="UIExit" type="Panel" parent="." unique_id=2011157120]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_14wem")
+
+[node name="CardExit" type="Panel" parent="UIExit" unique_id=400467311]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.5
+offset_top = -152.0
+offset_right = 346.5
+offset_bottom = 218.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2atga")
+
+[node name="Label" type="Label" parent="UIExit/CardExit" unique_id=911343540]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -225.0
+offset_top = -74.5
+offset_right = 225.0
+offset_bottom = 14.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 35
+text = "Are you sure you want to 
+exit the game?"
+horizontal_alignment = 1
+
+[node name="ButtonYes" type="Button" parent="UIExit/CardExit" unique_id=1654701697]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 77.0
+offset_top = -127.0
+offset_right = 422.0
+offset_bottom = -61.0
+grow_vertical = 0
+scale = Vector2(0.68, 1)
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/hover = SubResource("StyleBoxTexture_hxu56")
+text = "Yes"
+icon = ExtResource("1_3er1b")
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="ButtonNo" type="Button" parent="UIExit/CardExit" unique_id=2126953264]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -328.0
+offset_top = -128.0
+offset_right = 17.0
+offset_bottom = -62.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.68, 1)
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/hover = SubResource("StyleBoxTexture_hxu56")
+text = "No"
+icon = ExtResource("1_3er1b")
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="UICredit" type="Panel" parent="." unique_id=536681681]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_14wem")
+
+[node name="CardCredit" type="Panel" parent="UICredit" unique_id=1602421371]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -346.5
+offset_top = -304.0
+offset_right = 395.0
+offset_bottom = 305.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_2atga")
+
+[node name="Title" type="Label" parent="UICredit/CardCredit" unique_id=514130673]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.0
+offset_top = 26.0
+offset_right = 225.0
+offset_bottom = 115.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 35
+text = "Credit"
+horizontal_alignment = 1
+
+[node name="ButtonBack" type="Button" parent="UICredit/CardCredit" unique_id=1200771947]
+layout_mode = 1
+offset_top = 10.0
+offset_right = 136.0
+offset_bottom = 143.0
+scale = Vector2(0.64, 0.6335576)
+size_flags_vertical = 3
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/hover = SubResource("StyleBoxTexture_hxu56")
+icon = ExtResource("7_2atga")
+flat = true
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="Logo" type="TextureRect" parent="UICredit/CardCredit" unique_id=1668073064]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -95.25
+offset_top = 66.0
+offset_right = 359.86438
+offset_bottom = 449.33252
+grow_horizontal = 2
+scale = Vector2(0.43999922, 0.3600008)
+texture = ExtResource("4_0iwki")
+
+[node name="LabelPic" type="Label" parent="UICredit/CardCredit" unique_id=98984250]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -148.0
+offset_top = -99.5
+offset_right = -106.0
+offset_bottom = -63.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.29, 0.29, 0.29, 1)
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 29
+text = "Pic"
+
+[node name="Pic" type="RichTextLabel" parent="UICredit/CardCredit" unique_id=795761470]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -97.0
+offset_right = 167.0
+offset_bottom = -57.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_hxu56")
+theme_override_font_sizes/normal_font_size = 26
+text = "Lintang Azzahra"
+fit_content = true
+
+[node name="LabelGameDesainer" type="Label" parent="UICredit/CardCredit" unique_id=35978918]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -309.0
+offset_top = -46.5
+offset_right = -98.0
+offset_bottom = -10.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.29, 0.29, 0.29, 1)
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 26
+text = "Game Desainer"
+horizontal_alignment = 2
+
+[node name="GameDesainer" type="RichTextLabel" parent="UICredit/CardCredit" unique_id=1438684250]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -44.5
+offset_right = 165.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_hxu56")
+theme_override_font_sizes/normal_font_size = 26
+text = "Naufal Zahid"
+fit_content = true
+
+[node name="LabelGameArtist" type="Label" parent="UICredit/CardCredit" unique_id=476598646]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -311.0
+offset_top = 2.5
+offset_right = -100.0
+offset_bottom = 38.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.29, 0.29, 0.29, 1)
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 26
+text = "Game Artist"
+horizontal_alignment = 2
+
+[node name="GameArtis" type="RichTextLabel" parent="UICredit/CardCredit" unique_id=1345048907]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = 3.5
+offset_right = 213.0
+offset_bottom = 68.75
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_hxu56")
+theme_override_font_sizes/normal_font_size = 26
+text = "Lintang Azzahra"
+fit_content = true
+
+[node name="LabelGameProgrammer" type="Label" parent="UICredit/CardCredit" unique_id=283418123]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -332.0
+offset_top = 49.5
+offset_right = -93.0
+offset_bottom = 85.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.29, 0.29, 0.29, 1)
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 26
+text = "Game Programmer"
+horizontal_alignment = 1
+
+[node name="GameProgrammer" type="RichTextLabel" parent="UICredit/CardCredit" unique_id=1684540192]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.0
+offset_top = 48.5
+offset_right = 374.0
+offset_bottom = 208.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("1_hxu56")
+theme_override_font_sizes/normal_font_size = 26
+text = "Hamdallah Transhufiya Raksaba 
+Irsyadulloh Ramadhan B.N
+Richo Albert Tio"
+fit_content = true
+
+[connection signal="pressed" from="Button/ButtonCredit" to="." method="_on_button_credit_pressed"]
+[connection signal="pressed" from="Button/ButtonExit" to="." method="_on_button_exit_pressed"]
+[connection signal="pressed" from="UIExit/CardExit/ButtonYes" to="." method="_on_button_yes_pressed"]
+[connection signal="pressed" from="UIExit/CardExit/ButtonNo" to="." method="_on_button_no_pressed"]
+[connection signal="pressed" from="UICredit/CardCredit/ButtonBack" to="." method="_on_button_back_pressed"]
