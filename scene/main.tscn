@@ -192,10 +192,10 @@ wait_time = 6.5
 [node name="Ladder" parent="GroupLadder" unique_id=1969996198 instance=ExtResource("7_of57s")]
 position = Vector2(-249, 386)
 
-[node name="DoubelLadder" type="Node" parent="GroupLadder" unique_id=48089237]
+[node name="Ladder3" parent="GroupLadder" unique_id=1591686614 instance=ExtResource("7_of57s")]
+position = Vector2(-536, 99)
+scale = Vector2(1, 2)
 
-[node name="Ladder2" parent="GroupLadder/DoubelLadder" unique_id=1261350466 instance=ExtResource("7_of57s")]
-position = Vector2(-544, 12)
-
-[node name="Ladder3" parent="GroupLadder/DoubelLadder" unique_id=1591686614 instance=ExtResource("7_of57s")]
-position = Vector2(-544, 196)
+[node name="Ladder4" parent="GroupLadder" unique_id=72758905 instance=ExtResource("7_of57s")]
+position = Vector2(-1667, 199)
+scale = Vector2(1, 3)
