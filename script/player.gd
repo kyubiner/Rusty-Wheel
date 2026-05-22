@@ -1,9 +1,12 @@
 extends CharacterBody2D
+#@onready var ladder: Area2D = $"../GroupLadder/Ladder"
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
+var on_ladder = false
+var gravity = 980.0
 
 var wind_force = 0.0
 
@@ -21,7 +24,13 @@ func _physics_process(delta: float) -> void:
 	# gravity
 	if not is_on_floor():
 		velocity += get_gravity() * delta
-
+		
+	if on_ladder:
+		velocity.y = Input.get_axis("move_up", "move_down") * 100
+	else:
+		if not is_on_floor():
+			velocity.y += gravity * delta
+		
 	# input kiri kanan
 	var direction := Input.get_axis("move_left", "move_right")
 

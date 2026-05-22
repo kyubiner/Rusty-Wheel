@@ -15,7 +15,6 @@ region_enabled = true
 region_rect = Rect2(681, 192, 81, 192)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=641053701]
-z_index = -1
 position = Vector2(-0.5, 0)
 shape = SubResource("RectangleShape2D_db78t")
 

@@ -1,9 +1,10 @@
 extends Area2D
+@onready var on_ladder: Area2D = $"."
 
-func _on_area_entered(area: Area2D) -> void:
-	#Global.climb = true
-	pass
-
-func _on_area_exited(area: Area2D) -> void:
-	#Global.climb = false
-	pass # Replace with function body.
+func _on_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player") or body.name == "Player":
+		body.on_ladder = true
+		
+func _on_body_exited(body: Node2D) -> void:
+	if body.is_in_group("player") or body.name == "Player":
+		body.on_ladder = false
