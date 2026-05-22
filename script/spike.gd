@@ -5,7 +5,7 @@ extends Area2D
 # dan dengan ketinggian (height)
 # dan terus looping (delay -> (naik-turun)) untuk siklusnya
 
-@export var height := 50
+@export var height := 70
 @export var speed := 2.0
 @export var wait_time := 1.5  # delay tiap loop
 

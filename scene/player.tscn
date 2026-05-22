@@ -41,7 +41,7 @@ animations = [{
 size = Vector2(16.333332, 27.333334)
 
 [node name="Player" type="CharacterBody2D" unique_id=2003604571]
-scale = Vector2(3, 3.024)
+scale = Vector2(5, 5.04)
 script = ExtResource("1_it5sw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=874725204]
@@ -58,4 +58,3 @@ shape = SubResource("RectangleShape2D_xjhrq")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1332732597]
 position = Vector2(0, -9.666666)
 scale = Vector2(-11.453727, -15.339495)
-zoom = Vector2(2, 2)
