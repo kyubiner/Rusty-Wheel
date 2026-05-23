@@ -31,5 +31,7 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") or body.name == "Player":
-		print("Player tertusuk spike!")
 		body.global_position = CheckPointManager.Checkpoint_position
+		body.global_rotation = CheckPointManager.Checkpoint_rotation
+		body.velocity = Vector2.ZERO
+		body.direction = -1.0
