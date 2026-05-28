@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bdsidiru8hdl6" path="res://asset/logo-rusty-wheel.png" id="4_0iwki"]
 [ext_resource type="Texture2D" uid="uid://jmufy07jyg08" path="res://asset/Card.png" id="5_sepwh"]
 [ext_resource type="Texture2D" uid="uid://cvb2igt75cqr4" path="res://asset/btnBack.png" id="7_2atga"]
+[ext_resource type="AudioStream" uid="uid://bjr46bjpnn0db" path="res://sound/main-menu.wav" id="8_by01r"]
+[ext_resource type="AudioStream" uid="uid://bs7nwp2ova7il" path="res://sound/hover.wav" id="9_hmxu4"]
+[ext_resource type="AudioStream" uid="uid://bv787awuiwdrj" path="res://sound/click.wav" id="10_ictww"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0iwki"]
 texture = ExtResource("1_2fwvj")
@@ -404,8 +407,22 @@ Irsyadulloh Ramadhan B.N
 Richo Albert Tio"
 fit_content = true
 
+[node name="GroupAudio" type="Node" parent="." unique_id=2014021462]
+
+[node name="mainAudio" type="AudioStreamPlayer2D" parent="GroupAudio" unique_id=1586268332]
+stream = ExtResource("8_by01r")
+
+[node name="hoverAudio" type="AudioStreamPlayer2D" parent="GroupAudio" unique_id=447324595]
+stream = ExtResource("9_hmxu4")
+
+[node name="clickAudio" type="AudioStreamPlayer2D" parent="GroupAudio" unique_id=498373018]
+stream = ExtResource("10_ictww")
+
+[connection signal="mouse_entered" from="Button/ButtonStart" to="." method="_on_button_start_mouse_entered"]
 [connection signal="pressed" from="Button/ButtonStart" to="." method="_on_button_start_pressed"]
+[connection signal="mouse_entered" from="Button/ButtonCredit" to="." method="_on_button_credit_mouse_entered"]
 [connection signal="pressed" from="Button/ButtonCredit" to="." method="_on_button_credit_pressed"]
+[connection signal="mouse_entered" from="Button/ButtonExit" to="." method="_on_button_exit_mouse_entered"]
 [connection signal="pressed" from="Button/ButtonExit" to="." method="_on_button_exit_pressed"]
 [connection signal="pressed" from="UIExit/CardExit/ButtonYes" to="." method="_on_button_yes_pressed"]
 [connection signal="pressed" from="UIExit/CardExit/ButtonNo" to="." method="_on_button_no_pressed"]
