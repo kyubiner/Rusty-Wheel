@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var push_force = -20000.0
+@export var push_force = 20000.0
 @export var active_time = 4.0
 @export var inactive_time = 2.0
 

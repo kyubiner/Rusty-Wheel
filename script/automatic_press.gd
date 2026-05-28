@@ -1,7 +1,7 @@
 extends AnimatableBody2D
 
 # --- Konfigurasi Obstacle ---
-@export var travel_distance: float = 128.0
+@export var travel_distance: float = 155.0
 @export var speed_down: float = 0.2
 @export var speed_up: float = 1.2
 @export var delay_top: float = 1.0

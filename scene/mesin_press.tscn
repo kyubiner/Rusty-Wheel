@@ -1,37 +1,39 @@
 [gd_scene format=3 uid="uid://bn718di7itlec"]
 
 [ext_resource type="Script" uid="uid://ccjd3aswbe8xg" path="res://script/automatic_press.gd" id="1_3kxxx"]
-[ext_resource type="Texture2D" uid="uid://bknmxpajaa3ip" path="res://asset/tilemap_rusty_wheel.png" id="2_jmlpv"]
-[ext_resource type="Texture2D" uid="uid://dypw0vfny1ks5" path="res://asset/spark_07.png" id="3_0od6t"]
+[ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-new.png" id="2_0od6t"]
+[ext_resource type="Texture2D" uid="uid://kbmw14c31kj1" path="res://asset/spark_07.png" id="3_0od6t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4j5ol"]
 size = Vector2(92, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmlpv"]
-size = Vector2(93, 135)
+size = Vector2(93, 134)
 
 [node name="MesinPress" type="AnimatableBody2D" unique_id=125073045]
 script = ExtResource("1_3kxxx")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1960622988]
-position = Vector2(717.5, 286)
-scale = Vector2(3.0312514, 2.0606058)
-texture = ExtResource("2_jmlpv")
+position = Vector2(715.5, 248)
+scale = Vector2(0.9062499, 0.4583334)
+texture = ExtResource("2_0od6t")
 region_enabled = true
-region_rect = Rect2(191.71951, 63.45471, 32.389755, 66.09616)
+region_rect = Rect2(575.762, 190.8099, 96.630615, 288.2813)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2008590637]
+position = Vector2(722, 289)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2005383412]
-position = Vector2(717, 345)
+position = Vector2(-4, 21)
 shape = SubResource("RectangleShape2D_4j5ol")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1848685935]
-position = Vector2(717.5, 286.5)
+position = Vector2(717, 248)
 shape = SubResource("RectangleShape2D_jmlpv")
 
 [node name="ImpactEffect" type="Sprite2D" parent="." unique_id=445891068]
-position = Vector2(716.12506, 451.12503)
+visible = false
+position = Vector2(719.00006, 317)
 scale = Vector2(0.18701166, 0.21044919)
 texture = ExtResource("3_0od6t")
 

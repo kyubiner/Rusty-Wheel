@@ -8,6 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-new.png" id="6_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://cbn0856ha4plb" path="res://scene/ladder.tscn" id="7_of57s"]
 [ext_resource type="PackedScene" uid="uid://db7jgxbsw5qx8" path="res://scene/spike.tscn" id="7_p1hux"]
+[ext_resource type="PackedScene" uid="uid://bn718di7itlec" path="res://scene/mesin_press.tscn" id="9_b5f6u"]
+[ext_resource type="PackedScene" uid="uid://s5ucch3k8afc" path="res://scene/fan.tscn" id="10_tqoya"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p1hux"]
 texture = ExtResource("6_4j5ol")
@@ -59,6 +61,9 @@ sources/0 = SubResource("TileSetAtlasSource_p1hux")
 [node name="Main" type="Node2D" unique_id=1337815842]
 
 [node name="Parallax" parent="." unique_id=1624552341 instance=ExtResource("1_of57s")]
+position = Vector2(-250, 313)
+
+[node name="Parallax2" parent="." unique_id=2004867265 instance=ExtResource("1_of57s")]
 position = Vector2(-250, 313)
 
 [node name="TileMap" type="TileMapLayer" parent="." unique_id=92256684]
@@ -236,3 +241,118 @@ scale = Vector2(1, 2)
 [node name="Ladder4" parent="GroupLadder" unique_id=72758905 instance=ExtResource("7_of57s")]
 position = Vector2(-1667, 199)
 scale = Vector2(1, 3)
+
+[node name="GroupMesinPress" type="Node" parent="." unique_id=186596756]
+
+[node name="MesinPress" parent="GroupMesinPress" unique_id=125073045 instance=ExtResource("9_b5f6u")]
+position = Vector2(-573, 9)
+
+[node name="MesinPress2" parent="GroupMesinPress" unique_id=2028651220 instance=ExtResource("9_b5f6u")]
+position = Vector2(-3245, -86)
+travel_distance = 250.0
+
+[node name="MesinPress3" parent="GroupMesinPress" unique_id=1611387029 instance=ExtResource("9_b5f6u")]
+position = Vector2(-3390, -86)
+travel_distance = 250.0
+delay_bottom = 1.5
+
+[node name="MesinPress4" parent="GroupMesinPress" unique_id=2129746929 instance=ExtResource("9_b5f6u")]
+position = Vector2(-3548, -86)
+travel_distance = 250.0
+delay_bottom = 2.5
+
+[node name="MesinPress5" parent="GroupMesinPress" unique_id=49334972 instance=ExtResource("9_b5f6u")]
+position = Vector2(-8299, -468)
+travel_distance = 250.0
+
+[node name="MesinPress6" parent="GroupMesinPress" unique_id=555169128 instance=ExtResource("9_b5f6u")]
+position = Vector2(-8432, -468)
+travel_distance = 250.0
+delay_bottom = 1.5
+
+[node name="MesinPress7" parent="GroupMesinPress" unique_id=1608926114 instance=ExtResource("9_b5f6u")]
+position = Vector2(-8828, -468)
+travel_distance = 250.0
+delay_bottom = 2.5
+
+[node name="MesinPress8" parent="GroupMesinPress" unique_id=1972317921 instance=ExtResource("9_b5f6u")]
+position = Vector2(-8946, -466)
+travel_distance = 250.0
+
+[node name="MesinPress9" parent="GroupMesinPress" unique_id=1077088779 instance=ExtResource("9_b5f6u")]
+position = Vector2(-10849, -374)
+
+[node name="MesinPress10" parent="GroupMesinPress" unique_id=1127799326 instance=ExtResource("9_b5f6u")]
+position = Vector2(-12324, -1046)
+travel_distance = 250.0
+
+[node name="MesinPress11" parent="GroupMesinPress" unique_id=1460792303 instance=ExtResource("9_b5f6u")]
+position = Vector2(-12474, -1046)
+travel_distance = 250.0
+delay_bottom = 1.5
+
+[node name="MesinPress12" parent="GroupMesinPress" unique_id=87860312 instance=ExtResource("9_b5f6u")]
+position = Vector2(-12619, -1048)
+travel_distance = 250.0
+delay_bottom = 2.5
+
+[node name="Fan" parent="." unique_id=4577989 instance=ExtResource("10_tqoya")]
+position = Vector2(-4619, -180)
+
+[node name="CollisionShape2D" parent="Fan" index="0" unique_id=1332382587]
+position = Vector2(802, 565)
+
+[node name="GPUParticles2D" parent="Fan" index="1" unique_id=1694554947]
+position = Vector2(735.99994, 516)
+rotation = 0.49741885
+
+[node name="AnimatedSprite2D" parent="Fan" index="2" unique_id=688368395]
+position = Vector2(715, 502)
+flip_h = false
+
+[node name="Fan2" parent="." unique_id=1789067934 instance=ExtResource("10_tqoya")]
+position = Vector2(-5321, -177)
+
+[node name="CollisionShape2D" parent="Fan2" index="0" unique_id=1332382587]
+position = Vector2(802, 565)
+
+[node name="GPUParticles2D" parent="Fan2" index="1" unique_id=1694554947]
+position = Vector2(735.99994, 516)
+rotation = 0.49741885
+
+[node name="AnimatedSprite2D" parent="Fan2" index="2" unique_id=688368395]
+position = Vector2(715, 502)
+flip_h = false
+
+[node name="Fan3" parent="." unique_id=257618334 instance=ExtResource("10_tqoya")]
+position = Vector2(-6168, -179)
+
+[node name="CollisionShape2D" parent="Fan3" index="0" unique_id=1332382587]
+position = Vector2(802, 565)
+
+[node name="GPUParticles2D" parent="Fan3" index="1" unique_id=1694554947]
+position = Vector2(735.99994, 516)
+rotation = 0.49741885
+
+[node name="AnimatedSprite2D" parent="Fan3" index="2" unique_id=688368395]
+position = Vector2(715, 502)
+flip_h = false
+
+[node name="Fan4" parent="." unique_id=1545388906 instance=ExtResource("10_tqoya")]
+position = Vector2(-11122, -562)
+
+[node name="CollisionShape2D" parent="Fan4" index="0" unique_id=1332382587]
+position = Vector2(802, 565)
+
+[node name="GPUParticles2D" parent="Fan4" index="1" unique_id=1694554947]
+position = Vector2(735.99994, 516)
+rotation = 0.49741885
+
+[node name="AnimatedSprite2D" parent="Fan4" index="2" unique_id=688368395]
+position = Vector2(715, 502)
+flip_h = false
+
+[editable path="Fan"]
+[editable path="Fan2"]
+[editable path="Fan3"]
+[editable path="Fan4"]
