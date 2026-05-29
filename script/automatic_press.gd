@@ -10,7 +10,7 @@ extends AnimatableBody2D
 var start_pos: Vector2
 
 @onready var impact_effect = $ImpactEffect
-
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 func _ready():
 	start_pos = position
@@ -45,7 +45,7 @@ func setup_crush_logic():
 func show_impact_effect():
 
 	impact_effect.visible = true
-
+	audio_stream_player_2d.play()
 	await get_tree().create_timer(0.1).timeout
 
 	impact_effect.visible = false
@@ -55,7 +55,4 @@ func show_impact_effect():
 func _on_area_2d_body_entered(body):
 
 	if body.is_in_group("player") or body.name == "Player":
-
-		print("Player tertindih mesin!")
-
-		body.global_position = CheckPointManager.Checkpoint_position
+		body.global_position = Global.Checkpoint_position

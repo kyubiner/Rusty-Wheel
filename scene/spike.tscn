@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://db7jgxbsw5qx8"]
 
 [ext_resource type="Script" uid="uid://0gnf8chc3xr1" path="res://script/spike.gd" id="1_vi0yg"]
-[ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-new.png" id="2_vi0yg"]
+[ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-enviorement/tileset-new.png" id="2_vi0yg"]
+[ext_resource type="AudioStream" uid="uid://qkdnyqe5qirn" path="res://sound/Metal_Spike_impaled.mp3" id="3_dlj5e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xanym"]
 size = Vector2(42, 76)
@@ -11,6 +12,9 @@ size = Vector2(42, 76)
 
 [node name="Spike" type="Area2D" unique_id=1516459586]
 script = ExtResource("1_vi0yg")
+height = null
+speed = null
+wait_time = null
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=178141927]
 shape = SubResource("RectangleShape2D_xanym")
@@ -24,5 +28,8 @@ shape = SubResource("RectangleShape2D_vi0yg")
 texture = ExtResource("2_vi0yg")
 region_enabled = true
 region_rect = Rect2(24, 501, 42, 75)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=728338509]
+stream = ExtResource("3_dlj5e")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

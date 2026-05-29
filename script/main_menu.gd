@@ -5,14 +5,10 @@ extends Control
 @onready var hoverAudio: AudioStreamPlayer2D = $GroupAudio/hoverAudio
 @onready var clickAudio: AudioStreamPlayer2D = $GroupAudio/clickAudio
 
-# Called when the node enters the scene tree for the first time.
+var is_loading : bool = false
+
 func _ready() -> void:
 	mainAudio.play()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 # buka panel credit
 func _on_button_credit_pressed() -> void:
@@ -40,7 +36,11 @@ func _on_button_yes_pressed():
 
 # masuk game
 func _on_button_start_pressed() -> void:
+	if is_loading:
+		return
+	is_loading = true
 	play_click()
+	await clickAudio.finished
 	get_tree().change_scene_to_file("res://scene/main.tscn")
 	
 func play_hover():
@@ -48,7 +48,6 @@ func play_hover():
 
 func play_click():
 	clickAudio.play()
-
 
 func _on_button_start_mouse_entered() -> void:
 	play_hover()

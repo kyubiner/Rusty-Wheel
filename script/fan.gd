@@ -6,6 +6,7 @@ extends Area2D
 
 @onready var particles = $GPUParticles2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 
 var is_active = true
 var timer = 0.0
@@ -17,8 +18,8 @@ func _physics_process(delta):
 
 	# kondisi aktif
 	if is_active:
-
-		# nyalakan partikel & animasi
+		# nyalakan partikel, sfx & animasi
+		audio_stream_player_2d.play()
 		particles.emitting = true
 		animated_sprite_2d.play()
 
@@ -35,7 +36,8 @@ func _physics_process(delta):
 	# kondisi mati
 	else:
 
-		# matikan partikel & animasi 
+		# matikan partikel, sfx & animasi 
+		audio_stream_player_2d.stop()
 		particles.emitting = false
 		animated_sprite_2d.stop()
 

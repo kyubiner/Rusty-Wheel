@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dcmxa88llvadb"]
 
-[ext_resource type="Texture2D" uid="uid://chyge8rergj61" path="res://asset/background-new.png" id="1_yf3pg"]
-[ext_resource type="Texture2D" uid="uid://ceyl4f1v8d7fa" path="res://asset/parallax-1.png" id="2_n7ir4"]
-[ext_resource type="Texture2D" uid="uid://lw8t7kads8ut" path="res://asset/parallax-2.png" id="3_rfryx"]
+[ext_resource type="Texture2D" uid="uid://chyge8rergj61" path="res://asset/background/background-new.png" id="1_yf3pg"]
+[ext_resource type="Texture2D" uid="uid://ceyl4f1v8d7fa" path="res://asset/background/parallax-1.png" id="2_n7ir4"]
+[ext_resource type="Texture2D" uid="uid://lw8t7kads8ut" path="res://asset/background/parallax-2.png" id="3_rfryx"]
 
 [node name="Parallax" type="Node2D" unique_id=1624552341]
 
@@ -14,7 +14,7 @@ repeat_times = 3
 texture = ExtResource("1_yf3pg")
 
 [node name="Parallax2D2" type="Parallax2D" parent="." unique_id=294479600]
-scroll_scale = Vector2(0.2, 0.2)
+scroll_scale = Vector2(0.2, 0)
 repeat_size = Vector2(1024, 0)
 repeat_times = 3
 
@@ -22,7 +22,7 @@ repeat_times = 3
 texture = ExtResource("2_n7ir4")
 
 [node name="Parallax2D3" type="Parallax2D" parent="." unique_id=1915080624]
-scroll_scale = Vector2(0.3, 0.3)
+scroll_scale = Vector2(0.3, 0)
 repeat_size = Vector2(1024, 0)
 repeat_times = 3
 

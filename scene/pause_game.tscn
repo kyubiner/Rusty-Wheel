@@ -1,5 +1,155 @@
 [gd_scene format=3 uid="uid://cdu4xar3uwf7s"]
 
+[ext_resource type="Texture2D" uid="uid://jmufy07jyg08" path="res://asset/ui/Card.png" id="1_7lug5"]
+[ext_resource type="Script" uid="uid://bsiwgslfm8hom" path="res://script/pause_game.gd" id="1_816f3"]
+[ext_resource type="FontFile" uid="uid://bju7n1nex6n7i" path="res://asset/font/PixelifySans-Bold.ttf" id="2_816f3"]
+[ext_resource type="Texture2D" uid="uid://bcvj6tjsbvaep" path="res://asset/ui/btn.png" id="4_7lug5"]
+[ext_resource type="AudioStream" uid="uid://bs7nwp2ova7il" path="res://sound/hover.wav" id="5_yla28"]
+[ext_resource type="AudioStream" uid="uid://bv787awuiwdrj" path="res://sound/click.wav" id="6_8ntb8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jv8ts"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_os41y"]
+texture = ExtResource("1_7lug5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_816f3"]
+
 [node name="pause_game" type="Control" unique_id=1065355783]
+process_mode = 2
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Pause Game"
+script = ExtResource("1_816f3")
+
+[node name="Panel" type="Panel" parent="." unique_id=1647000592]
+layout_mode = 1
+offset_left = -576.00006
+offset_top = -324.0
+offset_right = -536.00006
+offset_bottom = -284.0
+scale = Vector2(28.822624, 16.199398)
+accessibility_name = "Blur background"
+
+[node name="UICredit" type="Panel" parent="." unique_id=449957163]
+layout_mode = 1
+anchors_preset = -1
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "UI Credit"
+theme_override_styles/panel = SubResource("StyleBoxEmpty_jv8ts")
+
+[node name="CardCredit" type="Panel" parent="UICredit" unique_id=672577466]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -332.5
+offset_top = -179.5
+offset_right = 332.5
+offset_bottom = 179.5
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Credit"
+theme_override_styles/panel = SubResource("StyleBoxTexture_os41y")
+
+[node name="Title" type="Label" parent="UICredit/CardCredit" unique_id=2076528074]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 45.5
+offset_right = 226.0
+offset_bottom = 134.5
+grow_horizontal = 2
+accessibility_name = "Title"
+theme_override_fonts/font = ExtResource("2_816f3")
+theme_override_font_sizes/font_size = 46
+text = "Main Menu"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UICredit/CardCredit" unique_id=382813201]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -40.0
+offset_right = 241.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6, 0.6)
+accessibility_name = "option"
+
+[node name="ButtonResume" type="Button" parent="UICredit/CardCredit/VBoxContainer" unique_id=1521939498]
+layout_mode = 2
+size_flags_vertical = 3
+accessibility_name = "start"
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("2_816f3")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover = SubResource("StyleBoxTexture_816f3")
+text = "Resume"
+icon = ExtResource("4_7lug5")
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="margin" type="MarginContainer" parent="UICredit/CardCredit/VBoxContainer" unique_id=602091719]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+accessibility_name = "Margin"
+
+[node name="ButtonMainMenu" type="Button" parent="UICredit/CardCredit/VBoxContainer" unique_id=1210075576]
+layout_mode = 2
+size_flags_vertical = 3
+accessibility_name = "start"
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("2_816f3")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover = SubResource("StyleBoxTexture_816f3")
+text = "Main Menu"
+icon = ExtResource("4_7lug5")
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="Margin2" type="MarginContainer" parent="UICredit/CardCredit/VBoxContainer" unique_id=1736485849]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+accessibility_name = "Margin"
+
+[node name="ButtonQuitGame" type="Button" parent="UICredit/CardCredit/VBoxContainer" unique_id=906653014]
+layout_mode = 2
+size_flags_vertical = 3
+accessibility_name = "Quit Game"
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("2_816f3")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/hover = SubResource("StyleBoxTexture_816f3")
+text = "Quit Game"
+icon = ExtResource("4_7lug5")
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="HoverSoundPlayer" type="AudioStreamPlayer" parent="." unique_id=2073966472]
+stream = ExtResource("5_yla28")
+
+[node name="ClickSoundPlayer" type="AudioStreamPlayer" parent="." unique_id=1541364756]
+stream = ExtResource("6_8ntb8")
+
+[connection signal="mouse_entered" from="UICredit/CardCredit/VBoxContainer/ButtonResume" to="." method="_on_button_resume_mouse_entered"]
+[connection signal="pressed" from="UICredit/CardCredit/VBoxContainer/ButtonResume" to="." method="_on_button_resume_pressed"]
+[connection signal="mouse_entered" from="UICredit/CardCredit/VBoxContainer/ButtonMainMenu" to="." method="_on_button_main_menu_mouse_entered"]
+[connection signal="pressed" from="UICredit/CardCredit/VBoxContainer/ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]
+[connection signal="mouse_entered" from="UICredit/CardCredit/VBoxContainer/ButtonQuitGame" to="." method="_on_button_quit_game_mouse_entered"]
+[connection signal="pressed" from="UICredit/CardCredit/VBoxContainer/ButtonQuitGame" to="." method="_on_button_quit_game_pressed"]

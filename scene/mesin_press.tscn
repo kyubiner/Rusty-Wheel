@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://bn718di7itlec"]
 
 [ext_resource type="Script" uid="uid://ccjd3aswbe8xg" path="res://script/automatic_press.gd" id="1_3kxxx"]
-[ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-new.png" id="2_0od6t"]
-[ext_resource type="Texture2D" uid="uid://kbmw14c31kj1" path="res://asset/spark_07.png" id="3_0od6t"]
+[ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-enviorement/tileset-new.png" id="2_0od6t"]
+[ext_resource type="Texture2D" uid="uid://kbmw14c31kj1" path="res://asset/tileset-enviorement/spark_07.png" id="3_0od6t"]
+[ext_resource type="AudioStream" uid="uid://b3bvfpiry6vcn" path="res://sound/sfx_impact.ogg" id="4_qs2qj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4j5ol"]
-size = Vector2(92, 12)
+size = Vector2(87, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmlpv"]
-size = Vector2(93, 134)
+size = Vector2(89, 134)
 
 [node name="MesinPress" type="AnimatableBody2D" unique_id=125073045]
 script = ExtResource("1_3kxxx")
@@ -24,11 +25,11 @@ region_rect = Rect2(575.762, 190.8099, 96.630615, 288.2813)
 position = Vector2(722, 289)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2005383412]
-position = Vector2(-4, 21)
+position = Vector2(-6.5, 21)
 shape = SubResource("RectangleShape2D_4j5ol")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1848685935]
-position = Vector2(717, 248)
+position = Vector2(715.5, 248)
 shape = SubResource("RectangleShape2D_jmlpv")
 
 [node name="ImpactEffect" type="Sprite2D" parent="." unique_id=445891068]
@@ -36,5 +37,9 @@ visible = false
 position = Vector2(719.00006, 317)
 scale = Vector2(0.18701166, 0.21044919)
 texture = ExtResource("3_0od6t")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1897291011]
+position = Vector2(716, 248)
+stream = ExtResource("4_qs2qj")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

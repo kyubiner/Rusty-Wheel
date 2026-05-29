@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://388fmdeqq0pu"]
+
+[ext_resource type="Script" uid="uid://ik7eunoh3icn" path="res://script/monolog.gd" id="1_1a0ib"]
+[ext_resource type="Texture2D" uid="uid://cnbchdhwj27df" path="res://asset/ui/dialog.png" id="2_2uqkx"]
+[ext_resource type="FontFile" uid="uid://c6tinjv2pncs" path="res://asset/font/PixelifySans-Regular.ttf" id="3_08abg"]
+[ext_resource type="FontFile" uid="uid://bju7n1nex6n7i" path="res://asset/font/PixelifySans-Bold.ttf" id="4_x0kid"]
+
+[node name="Dialog" type="Control" unique_id=2101660488]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -576.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Dialog Scene"
+script = ExtResource("1_1a0ib")
+dialogues = ["\"Aku harus melompat untuk sampai ke pintu keluar, sayangnya aku tidak punya per di kakiku\"", "\"Bantu aku cari pernya untuk bantu aku keluar\""]
+
+[node name="Panel" type="Panel" parent="." unique_id=291197940]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Background"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1308474448]
+position = Vector2(690, 190)
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("2_2uqkx")
+
+[node name="Panel2" type="Panel" parent="." unique_id=1500743854]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 263.0
+offset_top = 379.0
+offset_right = 1100.0
+offset_bottom = 611.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Dialog"
+
+[node name="Enter" type="RichTextLabel" parent="Panel2" unique_id=1726302967]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 225.5
+offset_top = 77.0
+offset_right = 417.5
+offset_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Enter to Skip"
+theme_override_colors/default_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/normal_font = ExtResource("4_x0kid")
+theme_override_font_sizes/normal_font_size = 27
+bbcode_enabled = true
+text = "[wave amp=20 freq=10]Press [ENTER][/wave]"
+fit_content = true
+
+[node name="Player" type="RichTextLabel" parent="Panel2" unique_id=959964145]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -402.5
+offset_top = -97.0
+offset_right = -294.5
+offset_bottom = -54.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Rusdy"
+accessibility_description = "Name Player"
+theme_override_colors/default_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/normal_font = ExtResource("4_x0kid")
+theme_override_font_sizes/normal_font_size = 35
+text = "RUSDY"
+fit_content = true
+
+[node name="Monolog" type="RichTextLabel" parent="Panel2" unique_id=659723330]
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -399.5
+offset_top = -46.0
+offset_right = 407.5
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Monolog Player"
+theme_override_colors/default_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/normal_font = ExtResource("3_08abg")
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud "
+fit_content = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1999500257]
+process_mode = 2
+autoplay = true

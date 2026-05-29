@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://chb4yxcmyepr5"]
 
-[ext_resource type="Texture2D" uid="uid://bmkliowrcc6ml" path="res://asset/bg-main.png" id="1_2fwvj"]
-[ext_resource type="Texture2D" uid="uid://bcvj6tjsbvaep" path="res://asset/btn.png" id="1_3er1b"]
+[ext_resource type="Texture2D" uid="uid://bmkliowrcc6ml" path="res://asset/background/bg-main.png" id="1_2fwvj"]
+[ext_resource type="Texture2D" uid="uid://bcvj6tjsbvaep" path="res://asset/ui/btn.png" id="1_3er1b"]
 [ext_resource type="Script" uid="uid://nu3vxgbpbafg" path="res://script/main_menu.gd" id="1_14wem"]
 [ext_resource type="FontFile" uid="uid://bju7n1nex6n7i" path="res://asset/font/PixelifySans-Bold.ttf" id="1_hxu56"]
-[ext_resource type="Texture2D" uid="uid://bdsidiru8hdl6" path="res://asset/logo-rusty-wheel.png" id="4_0iwki"]
-[ext_resource type="Texture2D" uid="uid://jmufy07jyg08" path="res://asset/Card.png" id="5_sepwh"]
-[ext_resource type="Texture2D" uid="uid://cvb2igt75cqr4" path="res://asset/btnBack.png" id="7_2atga"]
+[ext_resource type="Texture2D" uid="uid://bdsidiru8hdl6" path="res://asset/ui/logo-rusty-wheel.png" id="4_0iwki"]
+[ext_resource type="Texture2D" uid="uid://jmufy07jyg08" path="res://asset/ui/Card.png" id="5_sepwh"]
+[ext_resource type="Texture2D" uid="uid://cvb2igt75cqr4" path="res://asset/ui/btnBack.png" id="7_2atga"]
 [ext_resource type="AudioStream" uid="uid://bjr46bjpnn0db" path="res://sound/main-menu.wav" id="8_by01r"]
 [ext_resource type="AudioStream" uid="uid://bs7nwp2ova7il" path="res://sound/hover.wav" id="9_hmxu4"]
 [ext_resource type="AudioStream" uid="uid://bv787awuiwdrj" path="res://sound/click.wav" id="10_ictww"]
@@ -58,7 +58,7 @@ theme_override_constants/separation = 8
 [node name="ButtonStart" type="Button" parent="Button" unique_id=1251275680]
 layout_mode = 2
 size_flags_vertical = 3
-accessibility_name = "ButtonMulai"
+accessibility_name = "start"
 theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 35
@@ -71,6 +71,7 @@ icon_alignment = 1
 [node name="ButtonCredit" type="Button" parent="Button" unique_id=1538849356]
 layout_mode = 2
 size_flags_vertical = 3
+accessibility_name = "Credit"
 theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 35
@@ -83,6 +84,7 @@ icon_alignment = 1
 [node name="ButtonExit" type="Button" parent="Button" unique_id=1159416100]
 layout_mode = 2
 size_flags_vertical = 3
+accessibility_name = "Exit"
 theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 35
@@ -99,6 +101,7 @@ offset_top = 178.0
 offset_right = 435.0
 offset_bottom = 471.0
 scale = Vector2(0.8800005, 0.72000015)
+accessibility_name = "Logo"
 texture = ExtResource("4_0iwki")
 
 [node name="UIExit" type="Panel" parent="." unique_id=2011157120]
@@ -109,6 +112,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "UI Quit"
 theme_override_styles/panel = SubResource("StyleBoxEmpty_14wem")
 
 [node name="CardExit" type="Panel" parent="UIExit" unique_id=400467311]
@@ -124,6 +128,7 @@ offset_right = 346.5
 offset_bottom = 218.5
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Quit"
 theme_override_styles/panel = SubResource("StyleBoxTexture_2atga")
 
 [node name="Label" type="Label" parent="UIExit/CardExit" unique_id=911343540]
@@ -139,6 +144,7 @@ offset_right = 225.0
 offset_bottom = 14.5
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Quit"
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 35
 text = "Are you sure you want to 
@@ -157,6 +163,7 @@ offset_bottom = -61.0
 grow_vertical = 0
 scale = Vector2(0.68, 1)
 size_flags_vertical = 3
+accessibility_name = "Yes"
 theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 33
@@ -181,6 +188,7 @@ grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.68, 1)
 size_flags_vertical = 3
+accessibility_name = "No"
 theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 33
@@ -198,6 +206,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "UI Credit"
 theme_override_styles/panel = SubResource("StyleBoxEmpty_14wem")
 
 [node name="CardCredit" type="Panel" parent="UICredit" unique_id=1602421371]
@@ -213,6 +222,7 @@ offset_right = 395.0
 offset_bottom = 305.0
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Credit"
 theme_override_styles/panel = SubResource("StyleBoxTexture_2atga")
 
 [node name="Title" type="Label" parent="UICredit/CardCredit" unique_id=514130673]
@@ -225,6 +235,7 @@ offset_top = 26.0
 offset_right = 225.0
 offset_bottom = 115.0
 grow_horizontal = 2
+accessibility_name = "Title"
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 35
 text = "Credit"
@@ -237,6 +248,7 @@ offset_right = 136.0
 offset_bottom = 143.0
 scale = Vector2(0.64, 0.6335576)
 size_flags_vertical = 3
+accessibility_name = "Back"
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 33
 theme_override_styles/hover = SubResource("StyleBoxTexture_hxu56")
@@ -256,6 +268,7 @@ offset_right = 359.86438
 offset_bottom = 449.33252
 grow_horizontal = 2
 scale = Vector2(0.43999922, 0.3600008)
+accessibility_name = "Logo"
 texture = ExtResource("4_0iwki")
 
 [node name="LabelPic" type="Label" parent="UICredit/CardCredit" unique_id=98984250]
@@ -271,6 +284,7 @@ offset_right = -106.0
 offset_bottom = -63.5
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Pic"
 theme_override_colors/font_color = Color(0.29, 0.29, 0.29, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 29
@@ -289,6 +303,7 @@ offset_right = 167.0
 offset_bottom = -57.5
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Pic"
 theme_override_fonts/normal_font = ExtResource("1_hxu56")
 theme_override_font_sizes/normal_font_size = 26
 text = "Lintang Azzahra"
@@ -307,6 +322,7 @@ offset_right = -98.0
 offset_bottom = -10.5
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Game Desainer"
 theme_override_colors/font_color = Color(0.29, 0.29, 0.29, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 26
@@ -326,6 +342,7 @@ offset_right = 165.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Game Desainer"
 theme_override_fonts/normal_font = ExtResource("1_hxu56")
 theme_override_font_sizes/normal_font_size = 26
 text = "Naufal Zahid"
@@ -344,6 +361,7 @@ offset_right = -100.0
 offset_bottom = 38.5
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Game Artist"
 theme_override_colors/font_color = Color(0.29, 0.29, 0.29, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 26
@@ -363,9 +381,49 @@ offset_right = 213.0
 offset_bottom = 68.75
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Game Artist"
 theme_override_fonts/normal_font = ExtResource("1_hxu56")
 theme_override_font_sizes/normal_font_size = 26
 text = "Lintang Azzahra"
+fit_content = true
+
+[node name="LabelGameSound" type="Label" parent="UICredit/CardCredit" unique_id=192500765]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -311.25
+offset_top = 50.5
+offset_right = -100.25
+offset_bottom = 86.5
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Game Sound"
+theme_override_colors/font_color = Color(0.29, 0.29, 0.29, 1)
+theme_override_fonts/font = ExtResource("1_hxu56")
+theme_override_font_sizes/font_size = 26
+text = "Game Sound"
+horizontal_alignment = 2
+
+[node name="GameSound" type="RichTextLabel" parent="UICredit/CardCredit" unique_id=449026136]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -83.25
+offset_top = 51.5
+offset_right = 209.75
+offset_bottom = 116.75
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Game Sound"
+theme_override_fonts/normal_font = ExtResource("1_hxu56")
+theme_override_font_sizes/normal_font_size = 26
+text = "Athar Ghaisan Herman"
 fit_content = true
 
 [node name="LabelGameProgrammer" type="Label" parent="UICredit/CardCredit" unique_id=283418123]
@@ -375,12 +433,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -332.0
-offset_top = 49.5
-offset_right = -93.0
-offset_bottom = 85.5
+offset_left = -328.25
+offset_top = 97.5
+offset_right = -89.25
+offset_bottom = 133.5
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Game Programer"
 theme_override_colors/font_color = Color(0.29, 0.29, 0.29, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 26
@@ -394,12 +453,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -83.0
-offset_top = 48.5
-offset_right = 374.0
-offset_bottom = 208.5
+offset_left = -81.25
+offset_top = 98.5
+offset_right = 375.75
+offset_bottom = 258.5
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Game Programer"
 theme_override_fonts/normal_font = ExtResource("1_hxu56")
 theme_override_font_sizes/normal_font_size = 26
 text = "Hamdallah Transhufiya Raksaba 
