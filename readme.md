@@ -1,5 +1,7 @@
 # Game Kelompok 5 Bootcamp Gamedev 2d with Godot Codelamp Batch 2
 
+[![Background](./asset/background/background_github.png)](https://rubiriku-dev.itch.io/rusty-wheel)
+
 *Jebakan mematikan menanti. Bisakah kamu menuntun Rusdy menuju kebebasan?*
 
 ### **About this game**
