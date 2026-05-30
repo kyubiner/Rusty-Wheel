@@ -39,6 +39,6 @@ Di sepanjang jalan, kamu akan menemukan stasiun baterai yang berfungsi sebagai c
 - Athar Ghaisan
 
 **Game Programmer** 
-- Hamdalah Transhufiya Raksaba
+- Hamdallah Transhufiya Raksaba
 - Richo Albert Tio
 - Irsyadulloh Ramadhan Bagus Nuryono
