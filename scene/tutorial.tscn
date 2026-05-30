@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bgj88lnayefds"]
+
+[ext_resource type="Texture2D" uid="uid://b56h0uav3scs6" path="res://asset/ui/card_tutorial.png" id="1_8jxoh"]
+[ext_resource type="Script" uid="uid://bd6brib41up8a" path="res://script/tutorial.gd" id="1_nvmt1"]
+[ext_resource type="Texture2D" uid="uid://cuijb2ewwht4j" path="res://asset/ui/card_tutorial2.png" id="2_nvmt1"]
+
+[node name="Tutorial" type="Control" unique_id=803014398]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Tutorial"
+script = ExtResource("1_nvmt1")
+
+[node name="Panel" type="Panel" parent="." unique_id=1712248366]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.822624, 16.199398)
+accessibility_name = "Blur background"
+
+[node name="CardTutorial" type="Sprite2D" parent="." unique_id=1377316354]
+position = Vector2(577, 323)
+texture = ExtResource("1_8jxoh")
+
+[node name="CardTutorial2" type="Sprite2D" parent="." unique_id=148169220]
+visible = false
+position = Vector2(577, 324)
+texture = ExtResource("2_nvmt1")

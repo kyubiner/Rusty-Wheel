@@ -1,10 +1,10 @@
 extends CharacterBody2D
-#@onready var ladder: Area2D = $"../GroupLadder/Ladder"
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer2D
 @onready var pause_game: Control = $pause_game
 @onready var dialog: Control = $"../Dialog"
+@onready var jump: AudioStreamPlayer2D = $Jump
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
@@ -29,9 +29,9 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 		
 	if (Input.is_action_just_pressed("move_up") and is_on_floor()) and Global.Jump:
-		#audio_stream_player_2d.play(SFX_SPIKES)
+		jump.play()
 		velocity.y = JUMP_VELOCITY
-		
+			
 	if on_ladder:
 		velocity.y = Input.get_axis("move_up", "move_down") * 250
 		if abs(velocity.y) > 1:

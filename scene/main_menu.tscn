@@ -7,10 +7,10 @@
 [ext_resource type="Texture2D" uid="uid://bdsidiru8hdl6" path="res://asset/ui/logo-rusty-wheel.png" id="4_0iwki"]
 [ext_resource type="Texture2D" uid="uid://jmufy07jyg08" path="res://asset/ui/Card.png" id="5_sepwh"]
 [ext_resource type="Texture2D" uid="uid://cvb2igt75cqr4" path="res://asset/ui/btnBack.png" id="7_2atga"]
-[ext_resource type="Texture2D" uid="uid://bns545dvs67qj" path="res://asset/icon_music.png" id="8_1o50l"]
+[ext_resource type="Texture2D" uid="uid://bns545dvs67qj" path="res://asset/ui/icon_music.png" id="8_1o50l"]
 [ext_resource type="AudioStream" uid="uid://bjr46bjpnn0db" path="res://sound/main-menu.wav" id="8_by01r"]
-[ext_resource type="Script" uid="uid://db5822532c0eh" path="res://scene/ui_setting.gd" id="8_cht4j"]
-[ext_resource type="Texture2D" uid="uid://cdwa3nfif2g4d" path="res://asset/icon_sound_fx.png" id="9_cht4j"]
+[ext_resource type="Script" uid="uid://db5822532c0eh" path="res://script/ui_setting.gd" id="8_cht4j"]
+[ext_resource type="Texture2D" uid="uid://cdwa3nfif2g4d" path="res://asset/ui/icon_sound_fx.png" id="9_cht4j"]
 [ext_resource type="AudioStream" uid="uid://bs7nwp2ova7il" path="res://sound/hover.wav" id="9_hmxu4"]
 [ext_resource type="AudioStream" uid="uid://bv787awuiwdrj" path="res://sound/click.wav" id="10_ictww"]
 
@@ -87,6 +87,7 @@ icon_alignment = 1
 [node name="ButtonSetting" type="Button" parent="Button" unique_id=1933287569]
 layout_mode = 2
 size_flags_vertical = 3
+accessibility_name = "Setting"
 theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 35
@@ -490,6 +491,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "UI Setting"
 theme_override_styles/panel = SubResource("StyleBoxEmpty_14wem")
 script = ExtResource("8_cht4j")
 
@@ -506,6 +508,7 @@ offset_right = 370.75
 offset_bottom = 184.5
 grow_horizontal = 2
 grow_vertical = 2
+accessibility_name = "Setting"
 theme_override_styles/panel = SubResource("StyleBoxTexture_2atga")
 
 [node name="Title" type="Label" parent="UISetting/CardSetting" unique_id=214391863]
@@ -518,6 +521,7 @@ offset_top = 26.0
 offset_right = 225.0
 offset_bottom = 115.0
 grow_horizontal = 2
+accessibility_name = "Setting Menu"
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 35
 text = "Setting"
@@ -530,6 +534,7 @@ offset_right = 136.0
 offset_bottom = 143.0
 scale = Vector2(0.64, 0.6335576)
 size_flags_vertical = 3
+accessibility_name = "Setting"
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 33
 theme_override_styles/hover = SubResource("StyleBoxTexture_hxu56")
@@ -548,6 +553,7 @@ offset_top = 109.5
 offset_right = -97.0
 offset_bottom = 154.5
 grow_horizontal = 2
+accessibility_name = "Muic"
 theme_override_colors/font_color = Color(0.3019608, 0.30980393, 0.3529412, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 35
@@ -568,6 +574,7 @@ offset_bottom = -15.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
+accessibility_name = "Music"
 
 [node name="LabelSoundFX" type="Label" parent="UISetting/CardSetting" unique_id=479628018]
 layout_mode = 1
@@ -579,6 +586,7 @@ offset_top = 199.5
 offset_right = -60.0
 offset_bottom = 244.5
 grow_horizontal = 2
+accessibility_name = "SoundFX"
 theme_override_colors/font_color = Color(0.3019608, 0.30980393, 0.3529412, 1)
 theme_override_fonts/font = ExtResource("1_hxu56")
 theme_override_font_sizes/font_size = 35
@@ -599,6 +607,7 @@ offset_bottom = 75.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
+accessibility_name = "SoundFX"
 
 [node name="IconMusic" type="TextureRect" parent="UISetting/CardSetting" unique_id=1881290965]
 layout_mode = 1
@@ -611,6 +620,7 @@ offset_right = 146.75
 offset_bottom = 2.0
 grow_vertical = 2
 scale = Vector2(0.76, 0.7892115)
+accessibility_name = "Icon Music"
 texture = ExtResource("8_1o50l")
 
 [node name="IconSound" type="TextureRect" parent="UISetting/CardSetting" unique_id=141784626]
@@ -624,6 +634,7 @@ offset_right = 146.75
 offset_bottom = 87.0
 grow_vertical = 2
 scale = Vector2(0.76, 0.7892115)
+accessibility_name = "Icon Sound"
 texture = ExtResource("9_cht4j")
 
 [node name="GroupAudio" type="Node" parent="." unique_id=2014021462]

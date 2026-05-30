@@ -15,13 +15,6 @@ func _ready():
 	# Terapkan volume saat game dibuka
 	_on_h_slide_music_changed(slider_music.value)
 	_on_h_slider_sound_fx_changed(slider_sfx.value)
-	
-	#print(AudioServer.get_bus_index("Master"))
-	#print(AudioServer.get_bus_index("Music"))
-	#print(AudioServer.get_bus_index("SFX"))
-	#
-	#print("Music Volume: ", slider_music.value)
-	#print("SFX Volume: ", slider_sfx.value)
 
 
 # ==========================

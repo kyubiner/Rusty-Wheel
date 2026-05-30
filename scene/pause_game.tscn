@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://cdu4xar3uwf7s"]
 
 [ext_resource type="Texture2D" uid="uid://jmufy07jyg08" path="res://asset/ui/Card.png" id="1_7lug5"]
-[ext_resource type="Script" path="res://script/pause_game.gd" id="1_816f3"]
+[ext_resource type="Script" uid="uid://bsiwgslfm8hom" path="res://script/pause_game.gd" id="1_816f3"]
 [ext_resource type="FontFile" uid="uid://bju7n1nex6n7i" path="res://asset/font/PixelifySans-Bold.ttf" id="2_816f3"]
 [ext_resource type="Texture2D" uid="uid://bcvj6tjsbvaep" path="res://asset/ui/btn.png" id="4_7lug5"]
 [ext_resource type="AudioStream" uid="uid://bs7nwp2ova7il" path="res://sound/hover.wav" id="5_yla28"]
 [ext_resource type="AudioStream" uid="uid://bv787awuiwdrj" path="res://sound/click.wav" id="6_8ntb8"]
+[ext_resource type="Script" uid="uid://db5822532c0eh" path="res://script/ui_setting.gd" id="7_rkykk"]
+[ext_resource type="Texture2D" uid="uid://cvb2igt75cqr4" path="res://asset/ui/btnBack.png" id="8_s36am"]
+[ext_resource type="Texture2D" uid="uid://bns545dvs67qj" path="res://asset/ui/icon_music.png" id="9_46ed5"]
+[ext_resource type="Texture2D" uid="uid://cdwa3nfif2g4d" path="res://asset/ui/icon_sound_fx.png" id="10_afs0r"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jv8ts"]
 
@@ -13,6 +17,13 @@
 texture = ExtResource("1_7lug5")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_816f3"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_36vxy"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6e334"]
+texture = ExtResource("1_7lug5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v2wbo"]
 
 [node name="pause_game" type="Control" unique_id=1065355783]
 process_mode = 2
@@ -110,7 +121,7 @@ custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 accessibility_name = "Margin"
 
-[node name="ButtonMainMenu" type="Button" parent="UICredit/CardCredit/VBoxContainer" unique_id=1210075576]
+[node name="ButtonSetting" type="Button" parent="UICredit/CardCredit/VBoxContainer" unique_id=1210075576]
 layout_mode = 2
 size_flags_vertical = 3
 accessibility_name = "start"
@@ -118,7 +129,7 @@ theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
 theme_override_fonts/font = ExtResource("2_816f3")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/hover = SubResource("StyleBoxTexture_816f3")
-text = "Main Menu"
+text = "Setting"
 icon = ExtResource("4_7lug5")
 autowrap_trim_flags = 0
 icon_alignment = 1
@@ -128,7 +139,7 @@ custom_minimum_size = Vector2(0, 20)
 layout_mode = 2
 accessibility_name = "Margin"
 
-[node name="ButtonQuitGame" type="Button" parent="UICredit/CardCredit/VBoxContainer" unique_id=906653014]
+[node name="ButtonMainMenu" type="Button" parent="UICredit/CardCredit/VBoxContainer" unique_id=906653014]
 layout_mode = 2
 size_flags_vertical = 3
 accessibility_name = "Quit Game"
@@ -136,7 +147,7 @@ theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
 theme_override_fonts/font = ExtResource("2_816f3")
 theme_override_font_sizes/font_size = 35
 theme_override_styles/hover = SubResource("StyleBoxTexture_816f3")
-text = "Quit Game"
+text = "Main Menu"
 icon = ExtResource("4_7lug5")
 autowrap_trim_flags = 0
 icon_alignment = 1
@@ -149,9 +160,166 @@ bus = &"SFX"
 stream = ExtResource("6_8ntb8")
 bus = &"SFX"
 
+[node name="UISetting" type="Panel" parent="." unique_id=374277017]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "UI Setting"
+theme_override_styles/panel = SubResource("StyleBoxEmpty_36vxy")
+script = ExtResource("7_rkykk")
+
+[node name="CardSetting" type="Panel" parent="UISetting" unique_id=1488086499]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -370.75
+offset_top = -184.5
+offset_right = 370.75
+offset_bottom = 184.5
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "Setting"
+theme_override_styles/panel = SubResource("StyleBoxTexture_6e334")
+
+[node name="Title" type="Label" parent="UISetting/CardSetting" unique_id=1904043746]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.0
+offset_top = 26.0
+offset_right = 225.0
+offset_bottom = 115.0
+grow_horizontal = 2
+accessibility_name = "Setting Menu"
+theme_override_fonts/font = ExtResource("2_816f3")
+theme_override_font_sizes/font_size = 35
+text = "Setting"
+horizontal_alignment = 1
+
+[node name="ButtonBackSetting" type="Button" parent="UISetting/CardSetting" unique_id=2084462949]
+layout_mode = 0
+offset_top = 10.0
+offset_right = 136.0
+offset_bottom = 143.0
+scale = Vector2(0.64, 0.6335576)
+size_flags_vertical = 3
+accessibility_name = "Setting"
+theme_override_fonts/font = ExtResource("2_816f3")
+theme_override_font_sizes/font_size = 33
+theme_override_styles/hover = SubResource("StyleBoxTexture_v2wbo")
+icon = ExtResource("8_s36am")
+flat = true
+autowrap_trim_flags = 0
+icon_alignment = 1
+
+[node name="LabelMusic" type="Label" parent="UISetting/CardSetting" unique_id=754875079]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -223.0
+offset_top = 109.5
+offset_right = -97.0
+offset_bottom = 154.5
+grow_horizontal = 2
+accessibility_name = "Muic"
+theme_override_colors/font_color = Color(0.3019608, 0.30980393, 0.3529412, 1)
+theme_override_fonts/font = ExtResource("2_816f3")
+theme_override_font_sizes/font_size = 35
+text = "Music"
+horizontal_alignment = 1
+
+[node name="HSlideMusic" type="HSlider" parent="UISetting/CardSetting" unique_id=748335660]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.99998
+offset_top = -31.0
+offset_right = 22.5
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+accessibility_name = "Music"
+
+[node name="LabelSoundFX" type="Label" parent="UISetting/CardSetting" unique_id=1650505763]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -212.0
+offset_top = 199.5
+offset_right = -60.0
+offset_bottom = 244.5
+grow_horizontal = 2
+accessibility_name = "SoundFX"
+theme_override_colors/font_color = Color(0.3019608, 0.30980393, 0.3529412, 1)
+theme_override_fonts/font = ExtResource("2_816f3")
+theme_override_font_sizes/font_size = 35
+text = "Sound FX"
+horizontal_alignment = 1
+
+[node name="HSliderSoundFX" type="HSlider" parent="UISetting/CardSetting" unique_id=1018427351]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -211.99998
+offset_top = 59.0
+offset_right = 21.5
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+accessibility_name = "SoundFX"
+
+[node name="IconMusic" type="TextureRect" parent="UISetting/CardSetting" unique_id=194094789]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 82.75
+offset_top = -64.0
+offset_right = 146.75
+offset_bottom = 2.0
+grow_vertical = 2
+scale = Vector2(0.76, 0.7892115)
+accessibility_name = "Icon Music"
+texture = ExtResource("9_46ed5")
+
+[node name="IconSound" type="TextureRect" parent="UISetting/CardSetting" unique_id=2075557265]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 82.75
+offset_top = 21.00003
+offset_right = 146.75
+offset_bottom = 87.0
+grow_vertical = 2
+scale = Vector2(0.76, 0.7892115)
+accessibility_name = "Icon Sound"
+texture = ExtResource("10_afs0r")
+
 [connection signal="mouse_entered" from="UICredit/CardCredit/VBoxContainer/ButtonResume" to="." method="_on_button_resume_mouse_entered"]
 [connection signal="pressed" from="UICredit/CardCredit/VBoxContainer/ButtonResume" to="." method="_on_button_resume_pressed"]
-[connection signal="mouse_entered" from="UICredit/CardCredit/VBoxContainer/ButtonMainMenu" to="." method="_on_button_main_menu_mouse_entered"]
-[connection signal="pressed" from="UICredit/CardCredit/VBoxContainer/ButtonMainMenu" to="." method="_on_button_main_menu_pressed"]
-[connection signal="mouse_entered" from="UICredit/CardCredit/VBoxContainer/ButtonQuitGame" to="." method="_on_button_quit_game_mouse_entered"]
-[connection signal="pressed" from="UICredit/CardCredit/VBoxContainer/ButtonQuitGame" to="." method="_on_button_quit_game_pressed"]
+[connection signal="mouse_entered" from="UICredit/CardCredit/VBoxContainer/ButtonSetting" to="." method="_on_button_main_menu_mouse_entered"]
+[connection signal="pressed" from="UICredit/CardCredit/VBoxContainer/ButtonSetting" to="." method="_on_button_main_menu_pressed"]
+[connection signal="mouse_entered" from="UICredit/CardCredit/VBoxContainer/ButtonMainMenu" to="." method="_on_button_quit_game_mouse_entered"]
+[connection signal="pressed" from="UICredit/CardCredit/VBoxContainer/ButtonMainMenu" to="." method="_on_button_quit_game_pressed"]
+[connection signal="pressed" from="UISetting/CardSetting/ButtonBackSetting" to="." method="_on_button_back_setting_pressed"]
+[connection signal="changed" from="UISetting/CardSetting/HSlideMusic" to="UISetting" method="_on_h_slide_music_changed"]
+[connection signal="changed" from="UISetting/CardSetting/HSliderSoundFX" to="UISetting" method="_on_h_slider_sound_fx_changed"]

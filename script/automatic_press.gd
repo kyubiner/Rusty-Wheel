@@ -10,20 +10,16 @@ extends AnimatableBody2D
 var start_pos: Vector2
 
 @onready var impact_effect = $ImpactEffect
-#@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
-@onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+#@onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer2D
 
 func _ready():
 	start_pos = position
 	setup_crush_logic()
 
-
 func setup_crush_logic():
-
 	var target_pos = start_pos + Vector2(0, travel_distance)
-
 	var tween = create_tween().set_loops()
-
 	# 1. Animasi Menghantam (Down)
 	tween.tween_property(self, "position", target_pos, speed_down)\
 		.set_trans(Tween.TRANS_EXPO).set_ease(Tween.EASE_IN)

@@ -67,6 +67,7 @@ autoplay = "default"
 frame_progress = 0.122304365
 flip_h = true
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=864461788]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2127972791]
 stream = ExtResource("3_38uky")
+volume_db = 24.0
 bus = &"SFX"

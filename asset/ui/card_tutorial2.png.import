@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bns545dvs67qj"
-path="res://.godot/imported/icon_music.png-512e693e4c6fe4fb495b1c0b9a78910a.ctex"
+uid="uid://cuijb2ewwht4j"
+path="res://.godot/imported/card_tutorial2.png-ade12ebcaf69187ed226ec4102c765be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/icon_music.png"
-dest_files=["res://.godot/imported/icon_music.png-512e693e4c6fe4fb495b1c0b9a78910a.ctex"]
+source_file="res://asset/ui/card_tutorial2.png"
+dest_files=["res://.godot/imported/card_tutorial2.png-ade12ebcaf69187ed226ec4102c765be.ctex"]
 
 [params]
 

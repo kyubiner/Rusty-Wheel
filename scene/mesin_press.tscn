@@ -38,7 +38,7 @@ position = Vector2(719.00006, 317)
 scale = Vector2(0.18701166, 0.21044919)
 texture = ExtResource("3_0od6t")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=1584784778]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=6120260]
 stream = ExtResource("4_qs2qj")
 bus = &"SFX"
 

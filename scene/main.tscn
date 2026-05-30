@@ -2,17 +2,19 @@
 
 [ext_resource type="PackedScene" uid="uid://8sii13b6ynq5" path="res://scene/player.tscn" id="1_md75l"]
 [ext_resource type="PackedScene" uid="uid://dcmxa88llvadb" path="res://scene/parallax.tscn" id="1_of57s"]
-[ext_resource type="Script" path="res://script/main.gd" id="1_wscrc"]
+[ext_resource type="Script" uid="uid://cny5ws31p7t6i" path="res://script/main.gd" id="1_wscrc"]
 [ext_resource type="TileSet" uid="uid://dxl2gvdu2lxy6" path="res://asset/ui/tile_set.tres" id="2_tqoya"]
 [ext_resource type="PackedScene" uid="uid://388fmdeqq0pu" path="res://scene/dialog.tscn" id="3_mswub"]
 [ext_resource type="PackedScene" uid="uid://ci8ifrvxby4n7" path="res://scene/check_point.tscn" id="5_0ha60"]
-[ext_resource type="Script" path="res://script/Global.gd" id="5_4j5ol"]
+[ext_resource type="Script" uid="uid://dit374k52chne" path="res://script/Global.gd" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://cbn0856ha4plb" path="res://scene/ladder.tscn" id="7_of57s"]
 [ext_resource type="PackedScene" uid="uid://db7jgxbsw5qx8" path="res://scene/spike.tscn" id="7_p1hux"]
 [ext_resource type="PackedScene" uid="uid://bn718di7itlec" path="res://scene/mesin_press.tscn" id="9_b5f6u"]
 [ext_resource type="PackedScene" uid="uid://lxd0fb8dqrjk" path="res://scene/utility_jump.tscn" id="10_k65ib"]
 [ext_resource type="PackedScene" uid="uid://s5ucch3k8afc" path="res://scene/fan.tscn" id="10_tqoya"]
 [ext_resource type="Texture2D" uid="uid://o1cr3necwbl8" path="res://asset/tileset-enviorement/exit.png" id="11_k65ib"]
+[ext_resource type="PackedScene" uid="uid://bgj88lnayefds" path="res://scene/tutorial.tscn" id="14_hybxs"]
+[ext_resource type="FontFile" uid="uid://bju7n1nex6n7i" path="res://asset/font/PixelifySans-Bold.ttf" id="15_v2gmf"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tqoya"]
 
@@ -118,146 +120,97 @@ script = ExtResource("5_4j5ol")
 
 [node name="Spike" parent="GroupSpike" unique_id=1516459586 instance=ExtResource("7_p1hux")]
 position = Vector2(337, 521)
-height = 70
-speed = 2.0
-wait_time = 1.5
 
 [node name="Spike2" parent="GroupSpike" unique_id=1243778345 instance=ExtResource("7_p1hux")]
 position = Vector2(47, 522)
-height = 70
-speed = 2.0
 wait_time = 3.0
 
 [node name="Spike3" parent="GroupSpike" unique_id=1626206045 instance=ExtResource("7_p1hux")]
 position = Vector2(-817, -53)
-height = 70
-speed = 2.0
 wait_time = 4.5
 
 [node name="Spike4" parent="GroupSpike" unique_id=1345155312 instance=ExtResource("7_p1hux")]
 position = Vector2(-1009, -53)
-height = 70
-speed = 2.0
 wait_time = 5.5
 
 [node name="Spike5" parent="GroupSpike" unique_id=1052775270 instance=ExtResource("7_p1hux")]
 position = Vector2(-1200, -52)
-height = 70
-speed = 2.0
 wait_time = 6.5
 
 [node name="Spike6" parent="GroupSpike" unique_id=1520322433 instance=ExtResource("7_p1hux")]
 position = Vector2(-1392, -52)
-height = 70
-speed = 2.0
 wait_time = 7.5
 
 [node name="Spike7" parent="GroupSpike" unique_id=1008988203 instance=ExtResource("7_p1hux")]
 position = Vector2(-3215, 527)
-height = 70
-speed = 2.0
 wait_time = 4.5
 
 [node name="Spike8" parent="GroupSpike" unique_id=418631247 instance=ExtResource("7_p1hux")]
 position = Vector2(-3408, 526)
-height = 70
-speed = 2.0
 wait_time = 5.5
 
 [node name="Spike9" parent="GroupSpike" unique_id=338029380 instance=ExtResource("7_p1hux")]
 position = Vector2(-3600, 527)
-height = 70
-speed = 2.0
 wait_time = 6.5
 
 [node name="Spike10" parent="GroupSpike" unique_id=2093724933 instance=ExtResource("7_p1hux")]
 position = Vector2(-3984, 526)
-height = 70
-speed = 2.0
 wait_time = 6.5
 
 [node name="Spike11" parent="GroupSpike" unique_id=1379248716 instance=ExtResource("7_p1hux")]
 position = Vector2(-4174, 526)
-height = 70
-speed = 2.0
 wait_time = 5.5
 
 [node name="Spike12" parent="GroupSpike" unique_id=174855442 instance=ExtResource("7_p1hux")]
 position = Vector2(-4367, 525)
-height = 70
-speed = 2.0
 wait_time = 6.5
 
 [node name="Spike13" parent="GroupSpike" unique_id=454528398 instance=ExtResource("7_p1hux")]
 position = Vector2(-4847, 525)
-height = 70
-speed = 2.0
 wait_time = 4.5
 
 [node name="Spike14" parent="GroupSpike" unique_id=1606158194 instance=ExtResource("7_p1hux")]
 position = Vector2(-5041, 525)
-height = 70
-speed = 2.0
 wait_time = 5.5
 
 [node name="Spike16" parent="GroupSpike" unique_id=2059363547 instance=ExtResource("7_p1hux")]
 position = Vector2(-6287, 813)
-height = 70
-speed = 2.0
 wait_time = 4.5
 
 [node name="Spike17" parent="GroupSpike" unique_id=1467386893 instance=ExtResource("7_p1hux")]
 position = Vector2(-6481, 813)
-height = 70
-speed = 2.0
 wait_time = 5.5
 
 [node name="Spike15" parent="GroupSpike" unique_id=967575648 instance=ExtResource("7_p1hux")]
 position = Vector2(-5233, 524)
-height = 70
-speed = 2.0
 wait_time = 6.5
 
 [node name="Spike18" parent="GroupSpike" unique_id=1124072065 instance=ExtResource("7_p1hux")]
 position = Vector2(-7920, 143)
-height = 70
-speed = 2.0
 wait_time = 5.5
 
 [node name="Spike19" parent="GroupSpike" unique_id=1259557797 instance=ExtResource("7_p1hux")]
 position = Vector2(-7826, 142)
-height = 70
-speed = 2.0
 wait_time = 6.5
 
 [node name="Spike20" parent="GroupSpike" unique_id=1997053026 instance=ExtResource("7_p1hux")]
 position = Vector2(-9935, 142)
-height = 70
-speed = 2.0
 wait_time = 5.5
 
 [node name="Spike21" parent="GroupSpike" unique_id=1519721989 instance=ExtResource("7_p1hux")]
 position = Vector2(-9841, 141)
-height = 70
-speed = 2.0
 wait_time = 6.5
 
 [node name="Spike22" parent="GroupSpike" unique_id=670717203 instance=ExtResource("7_p1hux")]
 position = Vector2(-11375, -431)
-height = 70
-speed = 2.0
 wait_time = 5.5
 
 [node name="Spike23" parent="GroupSpike" unique_id=2122936436 instance=ExtResource("7_p1hux")]
 position = Vector2(-11281, -432)
-height = 70
-speed = 2.0
 wait_time = 6.5
 
 [node name="Spike24" parent="GroupSpike" unique_id=1509477140 instance=ExtResource("7_p1hux")]
 position = Vector2(-13008, 720)
-height = 70
-speed = 2.0
 wait_time = 6.5
 
 [node name="GroupFan" type="Node" parent="." unique_id=1048559225]
@@ -397,14 +350,36 @@ position = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_k65ib")
 
 [node name="Dialog" parent="." unique_id=2101660488 instance=ExtResource("3_mswub")]
+visible = false
 z_index = 1
 offset_left = -57.0
 offset_top = 45.0
 offset_right = -57.0
 offset_bottom = 45.0
+dialogues = ["Aku harus melompat untuk sampai ke pintu keluar, sayangnya aku tidak punya per di kakiku", "Bantu aku cari pernya untuk bantu aku keluar"]
+
+[node name="Tutorial" parent="." unique_id=803014398 instance=ExtResource("14_hybxs")]
+visible = false
+z_index = 1
+offset_left = -66.0
+offset_top = 43.0
+offset_right = -62.0
+offset_bottom = 43.0
+
+[node name="Label" type="Label" parent="." unique_id=1093257233]
+visible = false
+offset_left = -14143.0
+offset_top = 594.0
+offset_right = -13772.0
+offset_bottom = 637.0
+theme_override_colors/font_color = Color(0.4, 0.44313726, 0.6901961, 1)
+theme_override_fonts/font = ExtResource("15_v2gmf")
+theme_override_font_sizes/font_size = 35
+text = "Sekarang bisa loncat"
 
 [connection signal="body_entered" from="WorldBordier" to="Player" method="_on_world_bordier_body_entered"]
 [connection signal="body_entered" from="ExitArea" to="." method="_on_exit_area_body_entered"]
+[connection signal="dialogue_finished" from="Dialog" to="." method="_on_dialog_dialogue_finished"]
 
 [editable path="Player"]
 [editable path="Player/pause_game"]

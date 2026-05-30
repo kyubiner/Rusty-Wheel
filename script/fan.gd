@@ -6,8 +6,8 @@ extends Area2D
 
 @onready var particles = $GPUParticles2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-#@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
-@onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+#@onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer2D
 
 var is_active = true
 var timer = 0.0

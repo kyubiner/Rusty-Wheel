@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-enviorement/tileset-new.png" id="2_hjaqi"]
 [ext_resource type="PackedScene" uid="uid://cdu4xar3uwf7s" path="res://scene/pause_game.tscn" id="3_ct4mp"]
 [ext_resource type="AudioStream" uid="uid://djn8gr64ihf0n" path="res://sound/Iron Ladder 15 sec.wav" id="3_fvtld"]
+[ext_resource type="AudioStream" uid="uid://b4kat504jx8jh" path="res://sound/spring.mp3" id="5_s4jxa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fvtld"]
 atlas = ExtResource("2_hjaqi")
@@ -75,5 +76,9 @@ offset_top = -10.119048
 offset_right = -0.4
 offset_bottom = -10.119048
 scale = Vector2(0.2, 0.2)
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="." unique_id=1211700503]
+stream = ExtResource("5_s4jxa")
+bus = &"SFX"
 
 [editable path="pause_game"]
