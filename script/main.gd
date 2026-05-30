@@ -3,15 +3,16 @@ extends Node2D
 @onready var pause_game: Control = $Player/pause_game
 @onready var dialog: Control = $Dialog
 @onready var tutorial: Control = $Tutorial
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 func _ready() -> void:
-	dialog.dialogue_finished.connect(_on_dialog_dialogue_finished)
 	get_tree().paused = false
 	if Global.Dialog:
 		dialog.visible = true
 		get_tree().paused = true
 	else:
 		dialog.visible = false
+		audio_stream_player.play()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause_game") and !Global.Dialog:
@@ -20,6 +21,7 @@ func _input(event: InputEvent) -> void:
 
 func _on_exit_area_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
+		Global.Dialog = true
 		get_tree().call_deferred(
 			"change_scene_to_file",
 			"res://scene/ending.tscn"

@@ -1,7 +1,7 @@
 extends Control
 signal dialogue_finished
 
-@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+@onready var audio_stream_playerr: AudioStreamPlayer = $AudioStreamPlayer
 @onready var rich_text_label: RichTextLabel = $Panel2/Monolog
 @export var dialogues = []
 
@@ -19,7 +19,14 @@ func _input(event: InputEvent) -> void:
 			next_text()
 
 func _ready() -> void:
-	start_dialogue(dialogues)
+	if Global.Dialog:
+		start_dialogue(dialogues)
+	else:
+		visible = false
+	if visible:
+		audio_stream_playerr.play()
+	else:
+		audio_stream_playerr.stop()
 
 func start_dialogue(texts):
 	dialogues = texts
@@ -53,6 +60,6 @@ func next_text():
 func end_dialogue():
 	Global.Dialog = false
 	get_tree().paused = false
-	audio_stream_player.stop()
+	audio_stream_playerr.stop()
 	visible = false
 	dialogue_finished.emit()

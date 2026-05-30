@@ -17,7 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="Rusty-Wheel"
 run/main_scene="uid://chb4yxcmyepr5"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="uid://dbvpst1b7u2wh"
 
 [audio]
 

@@ -25,5 +25,6 @@ accessibility_name = "Background"
 
 [node name="Dialog" parent="." unique_id=2101660488 instance=ExtResource("1_sgciq")]
 unique_name_in_owner = true
+visible = true
 layout_mode = 1
 dialogues = ["Akhirnya, aku bebas dari gunungan rongsok ini.", "Terima kasih kawanku"]

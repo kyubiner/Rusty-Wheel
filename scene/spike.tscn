@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://0gnf8chc3xr1" path="res://script/spike.gd" id="1_vi0yg"]
 [ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-enviorement/tileset-new.png" id="2_vi0yg"]
-[ext_resource type="AudioStream" uid="uid://qkdnyqe5qirn" path="res://sound/Metal_Spike_impaled.mp3" id="3_dlj5e"]
+[ext_resource type="AudioStream" uid="uid://qkdnyqe5qirn" path="res://sound/sfx_Metal_Spike_impaled.mp3" id="3_dlj5e"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xanym"]
 size = Vector2(42, 76)

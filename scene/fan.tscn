@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://s5ucch3k8afc"]
 
 [ext_resource type="Script" uid="uid://bdro8ckgvfhad" path="res://script/fan.gd" id="1_8k226"]
-[ext_resource type="AudioStream" uid="uid://b7quk8rvyuqt2" path="res://sound/fan.wav" id="3_38uky"]
+[ext_resource type="AudioStream" uid="uid://b7quk8rvyuqt2" path="res://sound/sfx_fan.wav" id="3_38uky"]
 [ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-enviorement/tileset-new.png" id="3_dseab"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v1m0j"]

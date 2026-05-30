@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://d1q40t8ucne1t" path="res://script/player.gd" id="1_it5sw"]
 [ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-enviorement/tileset-new.png" id="2_hjaqi"]
 [ext_resource type="PackedScene" uid="uid://cdu4xar3uwf7s" path="res://scene/pause_game.tscn" id="3_ct4mp"]
-[ext_resource type="AudioStream" uid="uid://djn8gr64ihf0n" path="res://sound/Iron Ladder 15 sec.wav" id="3_fvtld"]
+[ext_resource type="AudioStream" uid="uid://djn8gr64ihf0n" path="res://sound/sfx_Iron_Ladder.wav" id="3_fvtld"]
 [ext_resource type="AudioStream" uid="uid://b4kat504jx8jh" path="res://sound/spring.mp3" id="5_s4jxa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fvtld"]
@@ -62,7 +62,10 @@ shape = SubResource("RectangleShape2D_xjhrq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1332732597]
 position = Vector2(0, -9.666666)
-scale = Vector2(-11.453727, -15.339495)
+
+[node name="Camera2D2" type="Camera2D" parent="." unique_id=1544976357]
+visible = false
+position = Vector2(0, -9.666666)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="." unique_id=862734616]
 stream = ExtResource("3_fvtld")

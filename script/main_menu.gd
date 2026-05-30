@@ -11,10 +11,8 @@ var is_loading : bool = false
 func _ready() -> void:
 	get_tree().paused = false
 	mainAudio.play()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	print("Viewport:", get_viewport_rect().size)
+	print("Viewport", DisplayServer.window_get_size())
 
 # buka panel credit
 func _on_button_credit_pressed() -> void:
