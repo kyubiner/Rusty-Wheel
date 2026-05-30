@@ -8,11 +8,11 @@
 [ext_resource type="Texture2D" uid="uid://jmufy07jyg08" path="res://asset/ui/Card.png" id="5_sepwh"]
 [ext_resource type="Texture2D" uid="uid://cvb2igt75cqr4" path="res://asset/ui/btnBack.png" id="7_2atga"]
 [ext_resource type="Texture2D" uid="uid://bns545dvs67qj" path="res://asset/ui/icon_music.png" id="8_1o50l"]
-[ext_resource type="AudioStream" uid="uid://bjr46bjpnn0db" path="res://sound/main-menu.wav" id="8_by01r"]
 [ext_resource type="Script" uid="uid://db5822532c0eh" path="res://script/ui_setting.gd" id="8_cht4j"]
 [ext_resource type="Texture2D" uid="uid://cdwa3nfif2g4d" path="res://asset/ui/icon_sound_fx.png" id="9_cht4j"]
 [ext_resource type="AudioStream" uid="uid://bs7nwp2ova7il" path="res://sound/hover.wav" id="9_hmxu4"]
 [ext_resource type="AudioStream" uid="uid://bv787awuiwdrj" path="res://sound/click.wav" id="10_ictww"]
+[ext_resource type="AudioStream" uid="uid://cthtng8ap8ib3" path="res://sound/bgm.ogg" id="11_cht4j"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0iwki"]
 texture = ExtResource("1_2fwvj")
@@ -640,7 +640,7 @@ texture = ExtResource("9_cht4j")
 [node name="GroupAudio" type="Node" parent="." unique_id=2014021462]
 
 [node name="mainAudio" type="AudioStreamPlayer" parent="GroupAudio" unique_id=636290465]
-stream = ExtResource("8_by01r")
+stream = ExtResource("11_cht4j")
 bus = &"Music"
 
 [node name="hoverAudio" type="AudioStreamPlayer" parent="GroupAudio" unique_id=80662731]
