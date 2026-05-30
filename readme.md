@@ -28,3 +28,17 @@ Di sepanjang jalan, kamu akan menemukan stasiun baterai yang berfungsi sebagai c
 - **W / S**: Naik / Turun Tangga
 - **esc**: Membuka Pause menu
 - **Enter**: Melanjutkan Dialog / Tutorial
+
+### **Anggota Tim**
+
+**Game Desainer**
+Naufal Zahid
+
+**Game Artist**
+Lintang Azzahra
+Athar Ghaisan
+
+**Game Programmer** 
+Hamdalah Transhufiya Raksaba
+Richo Albert Tio
+Irsyadulloh Ramadhan Bagus Nuryono
