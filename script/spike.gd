@@ -8,7 +8,8 @@ extends Area2D
 @export var height := 70
 @export var speed := 2.0
 @export var wait_time := 1.5  # delay tiap loop
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+#@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer2D
 
 var start_y
 var time := 0.0

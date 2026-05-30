@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" uid="uid://8sii13b6ynq5" path="res://scene/player.tscn" id="1_md75l"]
 [ext_resource type="PackedScene" uid="uid://dcmxa88llvadb" path="res://scene/parallax.tscn" id="1_of57s"]
-[ext_resource type="Script" uid="uid://cny5ws31p7t6i" path="res://script/main.gd" id="1_wscrc"]
+[ext_resource type="Script" path="res://script/main.gd" id="1_wscrc"]
 [ext_resource type="TileSet" uid="uid://dxl2gvdu2lxy6" path="res://asset/ui/tile_set.tres" id="2_tqoya"]
 [ext_resource type="PackedScene" uid="uid://388fmdeqq0pu" path="res://scene/dialog.tscn" id="3_mswub"]
 [ext_resource type="PackedScene" uid="uid://ci8ifrvxby4n7" path="res://scene/check_point.tscn" id="5_0ha60"]
-[ext_resource type="Script" uid="uid://dit374k52chne" path="res://script/Global.gd" id="5_4j5ol"]
+[ext_resource type="Script" path="res://script/Global.gd" id="5_4j5ol"]
 [ext_resource type="PackedScene" uid="uid://cbn0856ha4plb" path="res://scene/ladder.tscn" id="7_of57s"]
 [ext_resource type="PackedScene" uid="uid://db7jgxbsw5qx8" path="res://scene/spike.tscn" id="7_p1hux"]
 [ext_resource type="PackedScene" uid="uid://bn718di7itlec" path="res://scene/mesin_press.tscn" id="9_b5f6u"]
@@ -381,6 +381,7 @@ shape = SubResource("WorldBoundaryShape2D_tqoya")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=614507114]
 stream = SubResource("AudioStreamOggVorbis_b5f6u")
 autoplay = true
+bus = &"Music"
 
 [node name="UtilityJump" parent="." unique_id=2052304817 instance=ExtResource("10_k65ib")]
 position = Vector2(-13961, 612)
@@ -396,7 +397,6 @@ position = Vector2(3, 3)
 shape = SubResource("RectangleShape2D_k65ib")
 
 [node name="Dialog" parent="." unique_id=2101660488 instance=ExtResource("3_mswub")]
-process_mode = 2
 z_index = 1
 offset_left = -57.0
 offset_top = 45.0

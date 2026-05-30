@@ -2,7 +2,7 @@ extends StaticBody2D
 @onready var lampu_off: Sprite2D = $lampu_off
 @onready var lampu_on: Sprite2D = $lampu_on
 @onready var check_point: StaticBody2D = $"."
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer2D
 var sfx = false
 
 # Called when the node enters the scene tree for the first time.

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cdu4xar3uwf7s"]
 
 [ext_resource type="Texture2D" uid="uid://jmufy07jyg08" path="res://asset/ui/Card.png" id="1_7lug5"]
-[ext_resource type="Script" uid="uid://bsiwgslfm8hom" path="res://script/pause_game.gd" id="1_816f3"]
+[ext_resource type="Script" path="res://script/pause_game.gd" id="1_816f3"]
 [ext_resource type="FontFile" uid="uid://bju7n1nex6n7i" path="res://asset/font/PixelifySans-Bold.ttf" id="2_816f3"]
 [ext_resource type="Texture2D" uid="uid://bcvj6tjsbvaep" path="res://asset/ui/btn.png" id="4_7lug5"]
 [ext_resource type="AudioStream" uid="uid://bs7nwp2ova7il" path="res://sound/hover.wav" id="5_yla28"]
@@ -143,9 +143,11 @@ icon_alignment = 1
 
 [node name="HoverSoundPlayer" type="AudioStreamPlayer" parent="." unique_id=2073966472]
 stream = ExtResource("5_yla28")
+bus = &"SFX"
 
 [node name="ClickSoundPlayer" type="AudioStreamPlayer" parent="." unique_id=1541364756]
 stream = ExtResource("6_8ntb8")
+bus = &"SFX"
 
 [connection signal="mouse_entered" from="UICredit/CardCredit/VBoxContainer/ButtonResume" to="." method="_on_button_resume_mouse_entered"]
 [connection signal="pressed" from="UICredit/CardCredit/VBoxContainer/ButtonResume" to="." method="_on_button_resume_pressed"]

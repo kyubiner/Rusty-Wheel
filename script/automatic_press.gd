@@ -10,7 +10,8 @@ extends AnimatableBody2D
 var start_pos: Vector2
 
 @onready var impact_effect = $ImpactEffect
-@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+#@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer2D
 
 func _ready():
 	start_pos = position
