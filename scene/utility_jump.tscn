@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://lxd0fb8dqrjk"]
+
+[ext_resource type="Script" uid="uid://crfy5qneigjhi" path="res://script/utility_jump.gd" id="1_8euh5"]
+[ext_resource type="Texture2D" uid="uid://dajcb3rcp5wxr" path="res://asset/tileset-enviorement/tileset-new.png" id="1_su4bv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8euh5"]
+size = Vector2(112.5, 121.5)
+
+[node name="UtilityJump" type="StaticBody2D" unique_id=2052304817]
+script = ExtResource("1_8euh5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1984929327]
+position = Vector2(-1, 0)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("1_su4bv")
+region_enabled = true
+region_rect = Rect2(588, 591, 75, 81)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=601695344]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1368809290]
+position = Vector2(-1.25, -0.25)
+shape = SubResource("RectangleShape2D_8euh5")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

@@ -5,9 +5,11 @@ extends Area2D
 # dan dengan ketinggian (height)
 # dan terus looping (delay -> (naik-turun)) untuk siklusnya
 
-@export var height := 50
+@export var height := 70
 @export var speed := 2.0
 @export var wait_time := 1.5  # delay tiap loop
+#@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer2D
 
 var start_y
 var time := 0.0
@@ -31,5 +33,7 @@ func _process(delta):
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player") or body.name == "Player":
-		print("Player tertusuk spike!")
-		body.global_position = CheckPointManager.Checkpoint_position
+		audio_stream_player_2d.play()
+		body.global_position = Global.Checkpoint_position
+		body.velocity = Vector2.ZERO
+		body.direction = -1.0

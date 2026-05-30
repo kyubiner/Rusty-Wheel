@@ -1,10 +1,13 @@
 extends Area2D
 
-@export var push_force = -20000.0
+@export var push_force = 20000.0
 @export var active_time = 4.0
 @export var inactive_time = 2.0
 
 @onready var particles = $GPUParticles2D
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+#@onready var audio_stream_player_2d: AudioStreamPlayer = $AudioStreamPlayer2D
 
 var is_active = true
 var timer = 0.0
@@ -15,10 +18,18 @@ func _physics_process(delta):
 	timer += delta
 
 	# kondisi aktif
+	#if is_active:
+		## nyalakan partikel, sfx & animasi
+		##audio_stream_player_2d.play()
+		#particles.emitting = true
+		#animated_sprite_2d.play()
+	
 	if is_active:
+		if !audio_stream_player_2d.playing:
+			audio_stream_player_2d.play()
 
-		# nyalakan partikel
 		particles.emitting = true
+		animated_sprite_2d.play()
 
 		# dorong player
 		for body in get_overlapping_bodies():
@@ -33,8 +44,10 @@ func _physics_process(delta):
 	# kondisi mati
 	else:
 
-		# matikan partikel
+		# matikan partikel, sfx & animasi 
+		audio_stream_player_2d.stop()
 		particles.emitting = false
+		animated_sprite_2d.stop()
 
 		# timer mati
 		if timer >= inactive_time:
