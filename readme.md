@@ -32,13 +32,13 @@ Di sepanjang jalan, kamu akan menemukan stasiun baterai yang berfungsi sebagai c
 ### **Anggota Tim**
 
 **Game Desainer**
-Naufal Zahid
+- Naufal Zahid
 
 **Game Artist**
-Lintang Azzahra
-Athar Ghaisan
+- Lintang Azzahra
+- Athar Ghaisan
 
 **Game Programmer** 
-Hamdalah Transhufiya Raksaba
-Richo Albert Tio
-Irsyadulloh Ramadhan Bagus Nuryono
+- Hamdalah Transhufiya Raksaba
+- Richo Albert Tio
+- Irsyadulloh Ramadhan Bagus Nuryono
